@@ -1,28 +1,37 @@
 export default function selectHability() {
-  const button = document.querySelector('.voltar');
+  const button = document.querySelector('.voltarBtn');
   const images = document.querySelectorAll('.habilidade_img');
-  const habilidadesContent = document.querySelector('.habilidadesContent');
-  button.classList.remove('active');
+  const certifiedLogo = document.querySelector('.certifiedLogo');
+  const CertifiedDocument = document.querySelector('.CertifiedDocument');
+  certifiedLogo.classList.remove('active');
+  CertifiedDocument.classList.remove('active');
 
   const randomValue = Math.random() * 0.3 + 0.3;
   document.documentElement.style.setProperty('--random-scale', randomValue);
 
-  function animateOut({ target }) {
-    // setTimeout(() => (habilidadesContent.style.display = 'none'), 500);
-    if (!target.classList.contains('voltar')) {
-      target.classList.add('target');
-    }
+  function animateOut() {
+    // setTimeout(() => (habilityContent_Icons.style.display = 'none'), 500);
+    // if (!target.classList.contains('voltarBtn')) {
+    //   target.classList.add('target');
+    // }
 
     images.forEach((image) => {
       if (image.classList.contains('active')) {
-        button.classList.add('active');
         setTimeout(
-          () => image.classList.remove('active'),
-          Math.floor(Math.random() * 300),
-        );
+          () => (
+            certifiedLogo.classList.add('active'),
+            CertifiedDocument.classList.add('active')
+          ),
+          500,
+        ),
+          setTimeout(
+            () => image.classList.remove('active'),
+            Math.floor(Math.random() * 300),
+          );
       } else {
         image.classList.add('active');
-        button.classList.remove('active');
+        CertifiedDocument.classList.remove('active');
+        certifiedLogo.classList.remove('active');
       }
     });
   }
@@ -41,10 +50,10 @@ export default function selectHability() {
 // }
 
 // function animateOut() {
-//   habilidadesContent.style.opacity = 0;
-//   habilidadesContent.style.transition = 'opacity 1s';
-//   habilidadesContent.addEventListener('transitionend', () => {
-//     habilidadesContent.style.display = 'none';
+//   habilityContent_Icons.style.opacity = 0;
+//   habilityContent_Icons.style.transition = 'opacity 1s';
+//   habilityContent_Icons.addEventListener('transitionend', () => {
+//     habilityContent_Icons.style.display = 'none';
 //     button.classList.add('actve');
 //     let displayNone = false;
 //     images.forEach((image) => {
