@@ -3,33 +3,31 @@ export default function selectHability() {
   const images = document.querySelectorAll('.habilidade_img');
   const certifiedLogo = document.querySelector('.certifiedLogo');
   const CertifiedDocument = document.querySelector('.CertifiedDocument');
-  certifiedLogo.classList.remove('active');
-  CertifiedDocument.classList.remove('active');
+  const certifiedLogoImg = document.querySelector('.certifiedLogoImg');
 
-  const randomValue = Math.random() * 0.3 + 0.3;
-  document.documentElement.style.setProperty('--random-scale', randomValue);
-
-  function animateOut() {
-    // setTimeout(() => (habilityContent_Icons.style.display = 'none'), 500);
-    // if (!target.classList.contains('voltarBtn')) {
-    //   target.classList.add('target');
-    // }
-
+  function animateOut({ target }) {
+    if (!target.classList.contains('voltarBtn')) {
+      const attributeSrc = target.getAttribute('src');
+      certifiedLogoImg.setAttribute('src', attributeSrc);
+      certifiedLogoImg.style.fill = 'blue';
+      // console.log(certifiedLogoImg.attributes.);
+    }
     images.forEach((image) => {
-      if (image.classList.contains('active')) {
+      if (!target.classList.contains('voltarBtn')) {
         setTimeout(
           () => (
             certifiedLogo.classList.add('active'),
-            CertifiedDocument.classList.add('active')
+            CertifiedDocument.classList.add('active'),
+            target.classList.remove('active')
           ),
           500,
         ),
           setTimeout(
             () => image.classList.remove('active'),
-            Math.floor(Math.random() * 300),
+            Math.floor(Math.random() * 400),
           );
       } else {
-        image.classList.add('active');
+        setTimeout(() => image.classList.add('active'), 400);
         CertifiedDocument.classList.remove('active');
         certifiedLogo.classList.remove('active');
       }
@@ -42,32 +40,3 @@ export default function selectHability() {
     image.addEventListener('click', animateOut);
   });
 }
-
-// if (button.classList.contains('active')) {
-//   button.style.display = 'block';
-// } else {
-//   button.style.display = 'none';
-// }
-
-// function animateOut() {
-//   habilityContent_Icons.style.opacity = 0;
-//   habilityContent_Icons.style.transition = 'opacity 1s';
-//   habilityContent_Icons.addEventListener('transitionend', () => {
-//     habilityContent_Icons.style.display = 'none';
-//     button.classList.add('actve');
-//     let displayNone = false;
-//     images.forEach((image) => {
-//       if (image.style.display !== 'none') {
-//         displayNone = false;
-//       }
-//     });
-//   });
-//   images.forEach((image) => {
-//     if (image === this) {
-//       image.style.transform = 'scale(1.5)';
-//     } else {
-//       image.style.transform = 'scale(0.5)';
-//     }
-//     image.style.transition = 'transform 1s';
-//   });
-// }
