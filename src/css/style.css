@@ -1,11 +1,12 @@
 /* ____________Global________________ */
-* {
+ul,h1,h2,p,div,span,a {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  margin-top: 0px;  
 }
 
 body {
@@ -164,10 +165,9 @@ img{
 }
 
 .habilitySection {
-  display: grid;
-  background-color: #f7f7f8;  
+  display: grid; 
+  background-color: #f7f7f8;    
 }
-
 .habilityContent_Icons {  
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -182,34 +182,167 @@ img{
   width: 100px;
   height: auto;
   justify-self: center;
-  align-self: center;
+  align-self: center; 
 }
 .habilityContent_Certified{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-area: 2/1;
   gap: 2rem;
-  padding-top: 2rem;
+  padding-top: 2rem;   
 }
-.CertifiedDocument{
-  border-radius: 8px;
-  border: 1px solid var(--principal_1);
-  padding: 1rem;
+/* ------------------------------------------------------ */
+.certifiedDocument{
+  display: grid;
+  grid-template-rows:auto 1fr ;
+  gap: 1rem;
+  align-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.certifiedDocumentContentTop div:last-child {
+  align-self: center;
+  justify-self: center;
+}
+.certifiedDocumentContentTop h2:last-child {
+  color: #424541;  
+}
+.certifiedDocumentContentTop .imgbx{
+  transition: .4s;
+  position: relative;
+  left: 30%;
+}
+.certifiedDocumentContentTop .contentBx{
+  position: relative;
+  transition: .4s;
+  left: 80px;
+  opacity: 0;
+  visibility: hidden;
   
 }
-.CertifiedDocument>img{
-  border-radius: 4px;
-  object-fit: cover;
+.certifiedDocument:hover .certifiedDocumentContentTop .imgbx{ 
+  left: 0;
 }
-.CertifiedDocument>h1{
-  font-size: 1.8rem;
+.certifiedDocument:hover .certifiedDocumentContentTop .contentBx{  
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.certifiedDocumentContentTop{
+  position: relative;
+  transition: .4s;
+  border-radius: 8px ;
+  padding: 1rem;
+  display: flex;  
+  gap: 1rem;
+  background-color: var(--principal_1);
+  height: 200px;
+  color: #fff;
+  justify-content: center;
+}
+.certifiedDocumentContentDetails li span{
+  color: #a97e2f;
+}
+.certifiedDocumentContentDetails li{
+  font-size:1.2rem ;
+  line-height: 1.2;
   margin-bottom: .5rem;
-  color: var(--principal_1); 
+  position: relative;
+  padding-left: 8px;
+  border-left: 10px solid #544523;
 }
+.certifiedDocumentContentDetails a{
+  padding: .3rem 1rem ;
+  border: 2px solid #A97E2F;
+  width: 160px;
+  border-radius: 25px 25px;
+  grid-column:1/3 ;
+  text-align: center;
+  color: #a97e2f;
+}
+.certifiedDocument .tech{
+  transition: .4s;
+  position: relative;
+  top: 30%;
+  grid-column:1/3 ;
+  font-size: 3rem;
+  line-height: .825;
+  color: #A97E2F;
+  margin-bottom: 1rem;
+  
+}
+.certifiedDocument:hover .slideY {
+  top: 0px;
+  transition: .4s;
+  opacity: 1;
+  visibility: visible;
+}
+.slideY{ 
+  overflow: hidden;
+  position:relative;
+  display: grid;  
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+  top:80px;
+  transition: .4s ;
+  opacity: 0;
+  visibility: hidden;
+}
+.certifiedDocument:hover .tech{
+  justify-self: start;
+  
+  top: 0px;
+}
+.certifiedDocument:hover .certifiedDocumentContentTop{
+  height:130px;
+}
+.certifiedDocument:hover .certifiedDocumentContentDetails{
+  height:250px;
+}
+.certifiedDocumentContentDetails{
+  position: relative;  
+  transition: .4s;
+  display: flex;
+  flex-direction: column;
+  border-radius:8px;
+  background-color: var(--background_1);  
+  color: #fff;    
+  padding: 1rem;
+  align-items: center;  
+  height:180px;
+}
+.horas::before {
+  content: 'horas:';
+  color:var(--principal_1);
+  position: absolute;
+  display: inline-block;
+  font-size: 1.3rem;
+  bottom:-11px;
+  right:0;
+}    
+.horas::after {
+  content: 'carga horária:';
+  color: #aba8a2;
+  position: absolute;
+  display: inline-block;
+  font-size: .8rem;
+  top: -14px;
+  text-align: right;
+}    
+.horas {    
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size:6rem;
+  color: #fff; 
+  line-height: .826;     
+}
+/* ___________________________________________________________________ */
 .certifiedLogoImg{
   max-width:200px;
   object-fit: fill;
-
 }
 .certifiedLogo{
   display: grid;
@@ -219,20 +352,20 @@ img{
 }
 
 .certifiedLogo.active,
-.CertifiedDocument.active{
+.certifiedDocument.active{
   transform: initial;
   transition: 0.5s;
   opacity: 1;
   visibility: visible;
 
 }
-.CertifiedDocument,
+.certifiedDocument,
 .certifiedLogo{
   opacity: 0;
   visibility: hidden;
   transition: .5s;
   }  
-.CertifiedDocument{
+.certifiedDocument{
   transform: translateX(100px); 
 }
 .certifiedLogo{  
@@ -241,15 +374,23 @@ img{
 }
 .voltarBtn{
   cursor: pointer;
-  border: none;
-  border-radius: 4px;
+  border: none;  
   color: white;
-  width: 40px;
+  width:40px;
   height: 40px;
-  background: #A97E2F url("../img/slide/arrow.svg") center center no-repeat;
-  transform: rotate(180deg);
+  background:  url("../img/slide/arrow.svg") center  center no-repeat;  
+  animation: moveArrow .6s ease-in-out infinite;  
 }
-
+@keyframes moveArrow {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+  100% { transform: translateX(0); }
+}
+@keyframes moveArrowReverse {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-8px); }
+  100% { transform: translateX(0); }
+}
 .projetos {
   background-color: #544523;
 }

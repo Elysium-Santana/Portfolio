@@ -2,14 +2,13 @@ export default function selectHability() {
   const button = document.querySelector('.voltarBtn');
   const images = document.querySelectorAll('.habilidade_img');
   const certifiedLogo = document.querySelector('.certifiedLogo');
-  const CertifiedDocument = document.querySelector('.CertifiedDocument');
-  const certifiedLogoImg = document.querySelector('.certifiedLogoImg');
+  const certifiedDocument = document.querySelector('.certifiedDocument');
+  let certifiedLogoImg = document.querySelector('.certifiedLogoImg');
 
   function animateOut({ target }) {
     if (!target.classList.contains('voltarBtn')) {
       const attributeSrc = target.getAttribute('src');
       certifiedLogoImg.setAttribute('src', attributeSrc);
-      certifiedLogoImg.style.fill = 'blue';
       // console.log(certifiedLogoImg.attributes.);
     }
     images.forEach((image) => {
@@ -17,7 +16,7 @@ export default function selectHability() {
         setTimeout(
           () => (
             certifiedLogo.classList.add('active'),
-            CertifiedDocument.classList.add('active'),
+            certifiedDocument.classList.add('active'),
             target.classList.remove('active')
           ),
           500,
@@ -28,7 +27,7 @@ export default function selectHability() {
           );
       } else {
         setTimeout(() => image.classList.add('active'), 400);
-        CertifiedDocument.classList.remove('active');
+        certifiedDocument.classList.remove('active');
         certifiedLogo.classList.remove('active');
       }
     });

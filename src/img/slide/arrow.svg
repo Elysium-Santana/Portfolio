@@ -1,3 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
-  <polygon fill="#FFF" stroke="#FFF" stroke-linejoin="round" points="0 0 0 14 11 7" transform="translate(1 1)"/>
+
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40px" height="40px" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+viewBox="0 0 100 100"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g id="Camada_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path fill="#A57E30" d="M47.6638 96.5346l-35.8302 -40.6161 -8.18392 -8.42369 0.405121 -0.394491 -0.0248033 -0.0283467 0.577564 -0.509059 46.3492 -45.0299 10.0536 10.3489 -37.0397 35.9849 34.5133 39.1231 -10.8202 9.54456zm34.9857 0l-35.8314 -40.6161 -8.18392 -8.42369 0.405121 -0.394491 -0.0248033 -0.0283467 0.578745 -0.509059 46.348 -45.0299 10.0548 10.3489 -37.0397 35.9849 34.5133 39.1231 -10.8202 9.54456z"/>
+ </g>
 </svg>
