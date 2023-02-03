@@ -1,6 +1,6 @@
 import { SlideNav } from './slide.js';
-import qualquercoisa from './selectAbility.js';
-qualquercoisa();
+import selectAbility from './selectAbility.js';
+selectAbility();
 const slide = new SlideNav('.slide', '.wrapper');
 slide.init();
 

@@ -284,7 +284,6 @@
 .certifiedLogo.active,
 .certifiedDocument.active {
   transform: initial;
-  transition: 0.5s;
   opacity: 1;
   visibility: visible;
 
@@ -294,7 +293,7 @@
 .certifiedLogo {
   opacity: 0;
   visibility: hidden;
-  transition: .5s;
+  transition: .6s;
 }
 
 .certifiedDocument {
@@ -347,16 +346,9 @@
     transform: translateY(0) rotate(90deg);
   }
 }
-
-
-
 .projetos {
   background-color: #544523;
 }
-
-
-
-
 .logos {
   cursor: pointer;
   transform: scale(0.3);
@@ -364,11 +356,15 @@
   opacity: 0;
   visibility: hidden;
 }
-
-
 .logos.active {
   transform: scale(1);
-  transition: 0.4s;
+  /* transition: 0.4s; */
   opacity: 1;
   visibility: visible;
+}
+.logos.target{
+  transform: scale(1.8);
+  /* transition: .7s; */
+  opacity: 0;
+  visibility: hidden;
 }

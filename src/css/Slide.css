@@ -8,42 +8,8 @@ img {
 .slide {
   display: flex;
 }
-slide:hover {
-  will-change: transform;
-  
-}
 
-.slide li.active:hover{
-  cursor: pointer;
-  transform: scale(1.05);
-}
-.card{
-  z-index: 10;
-  flex-shrink: 0;
-  max-width: 400px;
-  max-height:500px;
-  margin: 20px;
-  border-radius: 10px;
-  opacity: 0.8;
-  transform: scale(0.8);
-  transition: 0.4s;
-  overflow: hidden;
-  display: grid;
-  grid-template-rows: 2fr 1fr;
-  background-color: #1E201D;  
-  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4);
-}
-.cardContent>h2{
-color:#A97E2F;
-}
-.cardContent>p{
-  margin-bottom: 1rem;
-  font-size: .7rem;
-}
-.cardContent{
-  padding: 1rem 2rem;  
-  color: #fff;  
-}
+
 .slide li.active {
   transform: scale(1);
   opacity: 1;

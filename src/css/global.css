@@ -38,14 +38,6 @@ img {
   max-width: 1200px;
   margin: 0 auto;
 }
-
-.btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 0.4rem;
-  place-self: center start;
-}
-
 .title {
   font-size: 3.3rem;
   color: white;
@@ -91,8 +83,4 @@ img {
   align-items: center;
   padding-bottom: 5rem;
 }
-
-.principal_color_component {
-  color: var(--principal_2);
-  background-color: var(--principal_1);
-}
+/* _____________________________________________________________ */

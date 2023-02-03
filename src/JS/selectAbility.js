@@ -84,22 +84,30 @@ export default function selectAbility() {
           () => (
             certifiedLogo.classList.add('active'),
             certifiedDocument.classList.add('active'),
-            target.classList.remove('active')
+            target.classList.remove('target')
           ),
-          500,
+          600,
         ),
           setTimeout(
             () => image.classList.remove('active'),
             Math.floor(Math.random() * 400),
           );
       } else {
-        setTimeout(() => image.classList.add('active'), 400);
+        setTimeout(
+          () =>
+            setTimeout(
+              () => image.classList.add('active'),
+              Math.floor(Math.random() * 400),
+            ),
+          320,
+        );
         certifiedDocument.classList.remove('active');
         certifiedLogo.classList.remove('active');
       }
     });
     if (!target.classList.contains('voltarBtn')) {
       const attributeSrc = target.getAttribute('src');
+      target.classList.add('target');
 
       fetch(`.${attributeSrc}`)
         .then((response) => response.text())

@@ -23,5 +23,18 @@
 
 .navMenu ul {
   display: flex;
-  gap: 0.5rem;
+  gap: .5rem;
+}
+.navMenu a:hover{
+  border: #a97e2f 2px solid;
+  
+}
+.navMenu a{
+  border-radius: 25px 25px;
+  transition: .3s;
+  color: #a97e2f;
+  padding: .5rem 1rem ;
+  border: transparent 2px solid;
+
+
 }

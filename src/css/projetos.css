@@ -1,0 +1,58 @@
+.projectLinkBx:hover .projectLink {
+  color: #544523;
+
+}
+.projectLinkBx:hover {
+  background-color: #a97e2f; 
+}
+.projectLinkBx{
+  transition: .4s;
+  padding: .2rem 3rem;
+  margin: 0;
+  border-left: #a97e2f 3px solid;
+  justify-items: center;
+  text-align: center;
+  align-items: center;  
+}
+.btnConteiner{
+  transition: .4s;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  padding: .2rem 1rem;
+  border: 2px solid #a97e2f;
+  border-radius: 25px 25px;
+  margin: 0 auto;
+  color: #a97e2f;
+  height: 2rem;  
+}
+.card{
+  z-index: 10;
+  flex-shrink: 0;
+  width: 50vw;
+  max-width: 500px;
+  max-height:500px;
+  margin: 20px;
+  border-radius: 10px;
+  opacity: 0.8;
+  transform: scale(0.8);
+  transition: 0.4s;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-color: #1E201D;  
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4);
+}
+.cardContent>h2{
+color:#A97E2F;
+}
+.cardContent>p{
+  margin-bottom: 1rem;
+  font-size: .7rem;
+}
+.cardContent{
+  padding: 1rem 2rem;  
+  color: #fff;  
+}

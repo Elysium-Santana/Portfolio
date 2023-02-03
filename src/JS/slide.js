@@ -1,14 +1,14 @@
-import debounce from "./debounce.js";
+import debounce from './debounce.js';
 export class Slide {
   constructor(slide, wrapper) {
     this.slide = document.querySelector(slide);
     this.wrapper = document.querySelector(wrapper);
     this.dist = { finalPosition: 0, startX: 0, moviment: 0 };
-    this.activeClass = "active";
-    this.changeEvent = new Event("changeEvent");
+    this.activeClass = 'active';
+    this.changeEvent = new Event('changeEvent');
   }
   transition(active) {
-    this.slide.style.transition = active ? "transform 0.3s" : "";
+    this.slide.style.transition = active ? 'transform 0.3s' : '';
   }
   moveSlide(distX) {
     this.dist.movePosition = distX;
@@ -21,20 +21,20 @@ export class Slide {
 
   onStart(event) {
     let movetype;
-    if (event.type === "mousedown") {
+    if (event.type === 'mousedown') {
       event.preventDefault();
       this.dist.startX = event.clientX;
-      movetype = "mousemove";
+      movetype = 'mousemove';
     } else {
       this.dist.startX = event.changedTouches[0].clientX;
-      movetype = "touchmove";
+      movetype = 'touchmove';
     }
     this.wrapper.addEventListener(movetype, this.onMove);
     this.transition(false);
   }
   onMove(event) {
     const poiterPosition =
-      event.type === "mousemove"
+      event.type === 'mousemove'
         ? event.clientX
         : event.changedTouches[0].clientX;
     const finalPosition = this.updatePosition(poiterPosition);
@@ -42,7 +42,7 @@ export class Slide {
     this.moveSlide(finalPosition);
   }
   onEnd(event) {
-    const movetype = event.type === "mouseup" ? "mousemove" : "touchmove";
+    const movetype = event.type === 'mouseup' ? 'mousemove' : 'touchmove';
     this.wrapper.removeEventListener(movetype, this.onMove);
     this.dist.finalPosition = this.dist.movePosition;
     this.transition(true);
@@ -60,10 +60,10 @@ export class Slide {
   }
 
   addSlideEvent() {
-    this.wrapper.addEventListener("mousedown", this.onStart);
-    this.wrapper.addEventListener("touchstart", this.onStart);
-    this.wrapper.addEventListener("mouseup", this.onEnd);
-    this.wrapper.addEventListener("touchend", this.onEnd);
+    this.wrapper.addEventListener('mousedown', this.onStart);
+    this.wrapper.addEventListener('touchstart', this.onStart);
+    this.wrapper.addEventListener('mouseup', this.onEnd);
+    this.wrapper.addEventListener('touchend', this.onEnd);
   }
   onResize() {
     setTimeout(() => {
@@ -72,7 +72,7 @@ export class Slide {
     }, 1000);
   }
   addResizeEvent() {
-    window.addEventListener("resize", this.onResize);
+    window.addEventListener('resize', this.onResize);
   }
   bindEvent() {
     this.onStart = this.onStart.bind(this);
@@ -113,7 +113,7 @@ export class Slide {
   }
   changeActiveClass() {
     this.slideArray.forEach((item) =>
-      item.element.classList.remove(this.activeClass)
+      item.element.classList.remove(this.activeClass),
     );
     this.slideArray[this.index.active].element.classList.add(this.activeClass);
   }
@@ -130,7 +130,7 @@ export class Slide {
     this.addSlideEvent();
     this.slideConfig();
     this.addResizeEvent();
-    this.changeSlide(1);
+    this.changeSlide(2);
     return this;
   }
 }
@@ -145,12 +145,12 @@ export class SlideNav extends Slide {
     this.addArrowEvent();
   }
   addArrowEvent() {
-    this.prevElement.addEventListener("click", this.activePrevSlide);
-    this.nextElement.addEventListener("click", this.activeNextSlide);
+    this.prevElement.addEventListener('click', this.activePrevSlide);
+    this.nextElement.addEventListener('click', this.activeNextSlide);
   }
   createControl() {
-    const control = document.createElement("ul");
-    control.dataset.control = "slide";
+    const control = document.createElement('ul');
+    control.dataset.control = 'slide';
     this.slideArray.forEach((item, index) => {
       control.innerHTML += `<li><a href="#slide${index + 1}">${
         index + 1
@@ -160,16 +160,16 @@ export class SlideNav extends Slide {
     return control;
   }
   eventControl(item, index) {
-    item.addEventListener("click", (event) => {
+    item.addEventListener('click', (event) => {
       event.preventDefault();
       this.changeSlide(index);
       this.activeControlItem();
     });
-    this.wrapper.addEventListener("changeEvent", this.activeControlItem);
+    this.wrapper.addEventListener('changeEvent', this.activeControlItem);
   }
   activeControlItem() {
     this.controlArray.forEach((item) =>
-      item.classList.remove(this.activeClass)
+      item.classList.remove(this.activeClass),
     );
     this.controlArray[this.index.active].classList.add(this.activeClass);
   }
