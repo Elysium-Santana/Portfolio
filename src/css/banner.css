@@ -1,0 +1,23 @@
+.avatarImg {
+  max-width: 300px;
+  display: block;
+  margin: 0;
+}
+
+.bannerContent {
+  display: grid;
+  justify-content: start;
+}
+
+.bannerContentAvatar {
+  display: flex;
+  justify-content: center;
+}
+
+.banner {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--background_1);
+  padding: 5rem;
+}

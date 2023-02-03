@@ -1,0 +1,13 @@
+.sobreMim {
+  background-color: var(--preto);
+  color: #fff;
+
+}
+
+.sobreMimContent {
+  padding: 2rem 3rem;
+  background-color: var(--background_1);
+  border-radius: 15px;
+  margin: 2rem 1rem;
+}
+

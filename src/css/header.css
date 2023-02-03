@@ -1,0 +1,27 @@
+.header {
+  width: 100%;
+  position: fixed;
+  gap: 2rem;
+  background-color: var(--principal_2);
+  border-bottom: #a97e2f 2px solid;
+  z-index: 3;
+  top: 0;
+}
+
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.logo {
+  color: white;
+  font-size: 2rem;
+  font-family: arial;
+}
+
+.navMenu ul {
+  display: flex;
+  gap: 0.5rem;
+}

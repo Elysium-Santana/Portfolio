@@ -1,0 +1,374 @@
+.abilitySection {
+  background-color: #f7f7f8;
+  padding: 5rem;
+  /* height: 50vh;  */
+}
+
+.abilitySectionBx .title::before {
+  opacity: 80%;
+}
+
+.abilitySection>h1 {
+  color: #424541;
+}
+
+.abilitySectionBx {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.abilityContent_Icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
+  justify-content: center;
+  gap: 6rem 2rem; 
+  padding: 0 6rem;  
+  grid-area: 2/1;
+}
+.habilidade_img {
+  display: block;
+  width: 100px;
+  height: auto;
+  justify-self: center;
+  align-self: center;
+}
+.abilityContent_Certified {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-area: 2/1;
+  gap: 1rem;  
+  align-content: center; 
+  margin: 4rem 0;
+  
+  padding: 6rem ;
+  height: 300px;
+}
+
+/* ------------------------------------------------------ */
+.certifiedDocument {
+  display: flex;
+  flex-direction: column;  
+  gap: 1rem;
+  align-content: center;
+  position: relative;
+  overflow: hidden;  
+  max-height: auto; 
+  border-radius: 8px;  
+}
+
+.certifiedDocumentContentTop div:last-child {
+  align-self: center;
+  justify-self: center;
+}
+
+.certifiedDocumentContentTop h2:last-child {
+  color: #424541;
+}
+
+.certifiedDocumentContentTop .imgbx img {
+  max-width: 100%;
+  object-fit: fill;
+}
+
+.certifiedDocumentContentTop .imgbx {
+  position: absolute;
+  transition: .4s;
+  position: relative;
+  left: 25%;
+}
+
+.certifiedDocumentContentTop .contentBx {
+  position: relative;
+  transition: .4s;
+  left: 80px;
+  opacity: 0;
+  visibility: hidden;
+
+}
+
+.certifiedDocument:hover .certifiedDocumentContentTop .imgbx {
+  left: 0;
+}
+
+.certifiedDocument:hover .certifiedDocumentContentTop .contentBx {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.certifiedDocumentContentTop {
+  position: relative;
+  transition: .4s;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  background-color: var(--principal_1);  
+  height: 50%;
+  color: #fff;
+  justify-content: center;
+  border: 4px solid #6B5933;
+}
+
+.certifiedDocumentContentDetails li span {
+  color: #a97e2f;
+}
+
+.certifiedDocumentContentDetails li {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin-bottom: .5rem;
+  position: relative;
+  padding-left: 8px;
+  border-left: 10px solid #544523;
+  color: #fff;
+}
+
+.certifiedDocumentContentDetails a:hover {
+  background-color: #a97e2f;
+  color: #544523;
+  border: 2px solid #a97e2f;
+}
+
+.certifiedDocumentContentDetails a {
+  padding: .3rem 1rem;
+  border: 2px solid #a97e2f;
+  width: 160px;
+  border-radius: 25px 25px;
+  grid-column: 1/3;
+  text-align: center;
+  color: #a97e2f;
+}
+
+.certifiedDocument:hover .tech::after {
+  opacity: 0;
+}
+
+.tech::after {
+  transition: .4s;
+  content: '';
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  width: 40px;
+  height: 40px;
+  top: 50px;
+  background: url("../img/slide/arrow.svg") center center no-repeat;
+  animation: moveArrowUp .8s ease-in-out infinite;
+
+}
+
+.tech {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  transition: .4s;
+  position: relative;
+  top: 30%;
+  grid-column: 1/3;
+  font-size: 3rem;
+  line-height: .825;
+  color: #a97e2f;
+  margin-bottom: 1rem;
+}
+
+.certifiedDocument:hover .slideY {
+  top: 20px;
+  transition: .4s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.slideY {
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap:  1rem;
+  top: 80px;
+  transition: .4s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.certifiedDocument:hover .tech {
+  justify-self: start;
+  top: 20px;
+}
+
+.certifiedDocument:hover .certifiedDocumentContentTop {
+  height:30%;
+}
+
+.certifiedDocument:hover .certifiedDocumentContentDetails {
+  height: 70%
+}
+
+.certifiedDocumentContentDetails {
+  position: relative;
+  transition: .4s;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: var(--background_1);  
+  padding: 1rem;
+  align-items: center;
+  height:50%;
+}
+.horas::before {
+  content: 'horas:';
+  color: var(--principal_1);
+  position: absolute;
+  display: inline-block;
+  font-size: 1.3rem;
+  bottom: -11px;
+  right: 0;
+}
+.horas::after {
+  position: absolute;
+  content: 'carga horária:';
+  color: #aba8a2;
+  position: absolute;
+  display: inline-block;
+  font-size: .8rem;
+  top: -14px;
+  left: 14px;
+}
+.horas {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 6rem;
+  color: #fff;
+  line-height: .826;
+}
+
+/* ___________________________________________________________________ */
+.certifiedLogoImgBx {
+  display: flex;
+  width:100%;
+}
+
+.certifiedLogoImg {
+  max-width: 100%;
+  object-fit: fill;
+  fill: #A97E2F;
+}
+
+.certifiedLogo {
+  display: flex;
+  justify-items: center;
+  position: relative;
+  border: #A97E2F solid 4px;
+  padding: 2rem;
+  border-radius: 8px;
+  
+  
+}
+
+.certifiedLogo::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  background-color: #f7f7f8;
+  position: absolute;
+  top: 27px;
+  left: -30px;
+}
+
+.certifiedLogo.active,
+.certifiedDocument.active {
+  transform: initial;
+  transition: 0.5s;
+  opacity: 1;
+  visibility: visible;
+
+}
+
+.certifiedDocument,
+.certifiedLogo {
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+}
+
+.certifiedDocument {
+  transform: translateX(100px);
+}
+
+.certifiedLogo {
+  transform: translateX(-100px);
+
+}
+
+.voltarBtn {
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  background: url("../img/slide/arrow.svg") center center no-repeat;
+  animation: moveArrow.6s ease-in-out infinite;
+  left: -30px;
+}
+
+
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+
+  50% {
+    transform: translateX(8px) rotate(0);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+@keyframes moveArrowUp {
+  0% {
+    transform: translateY(0) rotate(90deg);
+  }
+
+  50% {
+    transform: translateY(8px) rotate(90deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+
+
+.projetos {
+  background-color: #544523;
+}
+
+
+
+
+.logos {
+  cursor: pointer;
+  transform: scale(0.3);
+  transition: 0.4s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.logos.active {
+  transform: scale(1);
+  transition: 0.4s;
+  opacity: 1;
+  visibility: visible;
+}
