@@ -1,4 +1,4 @@
-import debounce from './debounce.js';
+import debounce from '../JS/debounce.js';
 export class Slide {
   constructor(slide, wrapper) {
     this.slide = document.querySelector(slide);

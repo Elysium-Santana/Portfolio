@@ -1,9 +1,12 @@
 import { SlideNav } from './slide.js';
 import selectAbility from './selectAbility.js';
+import ScrollSuave from './scroll-suave.js';
+const scrollSuave = new ScrollSuave(".navMenu a[href^='#']");
+scrollSuave.init();
 selectAbility();
 const slide = new SlideNav('.slide', '.wrapper');
 slide.init();
-
+slide.slideConfig();
 slide.activePrevSlide();
-slide.addArrow('.prev', '.next');
 slide.addControl('.custom-controls');
+slide.addArrow('.prev', '.next');
