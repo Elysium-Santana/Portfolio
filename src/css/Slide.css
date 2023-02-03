@@ -107,6 +107,7 @@ color:#A97E2F;
   height: 40px;
   background:  url("../img/slide/arrow.svg") center  center no-repeat;  
   transform:scaleX(-1);  
+  
 }
 
 .arrow-nav button.prev {
