@@ -1,20 +1,21 @@
 .header {
-  width: 100%;
-  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 2rem;
   background-color: var(--principal_2);
   border-bottom: #a97e2f 2px solid;
+  box-sizing: border-box;
   z-index: 3;
   top: 0;
+  padding: 1rem 2rem ;
 }
-
 .navMenu {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem 3rem;
+  align-items: center;  
+  overflow: hidden;
 }
-
 .logo {
   color: white;
   font-size: 2rem;
@@ -30,11 +31,101 @@
   
 }
 .navMenu a{
+  display: block;
   border-radius: 25px 25px;
   transition: .3s;
   color: #a97e2f;
   padding: .5rem 1rem ;
   border: transparent 2px solid;
-
-
 }
+
+
+
+.header button{
+  visibility: hidden;
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  border: none;
+  gap: 4px;
+  height: 40px;
+  cursor: pointer;  
+  overflow: hidden;
+}
+
+  
+@media(max-width: 1000px){
+  .header button{
+    visibility: visible;
+
+  }
+  .header{
+    position: relative;
+  }
+  .hamburgerBx:hover + .navMenu{
+    display: flex;
+    background-color: rgba(84, 69, 35, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    backdrop-filter: blur(10px);
+  }
+
+  .navMenu{ 
+    display: none;    
+    position: absolute;
+    top: 74px;
+    left: 0;    
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;align-items: start;
+    padding: 0;
+    padding: 0;
+
+  }  
+  .navMenu ul{
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    margin-top: 4rem;
+    /* align-items: center;     */
+   
+  }    
+  
+  .header button span{
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: #a97e2f;  
+    transition: .4s;
+  } 
+  
+  .header button span::before,
+  .header button span::after{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 35px;
+    height: 4px;
+    background-color:#a97e2f;  
+    transition: .4s;
+  }
+  .header button span::after{
+    top:-12px;
+  }
+  .header button span::before{
+    top:12px;
+  }
+  .hamburgerBx:hover .hamburger::after{
+    opacity: 0;
+  }
+  .hamburgerBx:hover .hamburger::before{
+    transform: rotate(90deg);    
+    top:0px;
+    left: 0px;
+  }
+  .hamburgerBx:hover .hamburger{
+    transform: rotate(-135deg);
+  }
+  
+}
+ 
