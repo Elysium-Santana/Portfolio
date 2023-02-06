@@ -1,6 +1,6 @@
 .abilitySection {
   background-color: #f7f7f8;
-  padding: 5rem;
+  /* padding: 5rem; */
   /* height: 50vh;  */
 }
 
@@ -22,8 +22,7 @@
 .abilityContent_Icons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  align-items: stretch;
-  justify-content: center;
+  justify-items: center;
   gap: 6rem 2rem; 
   padding: 0 6rem;  
   grid-area: 2/1;

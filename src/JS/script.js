@@ -1,8 +1,10 @@
 import { SlideNav } from './slide.js';
 import selectAbility from './selectAbility.js';
 import ScrollSuave from './scroll-suave.js';
-const scrollSuave = new ScrollSuave(".navMenu a[href^='#']");
+import toggleMenu from './toggleMenu.js';
+const scrollSuave = new ScrollSuave(".navMenu a[href^='#'], #topo[href^='#']");
 scrollSuave.init();
+toggleMenu();
 selectAbility();
 const slide = new SlideNav('.slide', '.wrapper');
 slide.init();

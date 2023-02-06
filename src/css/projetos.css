@@ -27,6 +27,7 @@
   margin: 0 auto;
   color: #a97e2f;
   height: 2rem;  
+  cursor: pointer;
 }
 .card{
   z-index: 10;
