@@ -1,3 +1,8 @@
+
+.projectLinkBx:first-child a{
+  position: relative;
+  left: 15px;
+}
 .projectLinkBx:hover .projectLink {
   color: #544523;
 
@@ -6,6 +11,8 @@
   background-color: #a97e2f; 
 }
 .projectLinkBx{
+  position: relative;
+  left: -15px;
   transition: .4s;
   padding: .2rem 3rem;
   margin: 0;
@@ -18,7 +25,7 @@
   transition: .4s;
   overflow: hidden;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 300px;
   padding: .2rem 1rem;
@@ -27,7 +34,6 @@
   margin: 0 auto;
   color: #a97e2f;
   height: 2rem;  
-  cursor: pointer;
 }
 .card{
   z-index: 10;
@@ -45,6 +51,7 @@
   grid-template-rows: 1fr 1fr;
   background-color: #1E201D;  
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4);
+cursor: pointer;
 }
 .cardContent>h2{
 color:#A97E2F;
@@ -56,4 +63,7 @@ color:#A97E2F;
 .cardContent{
   padding: 1rem 2rem;  
   color: #fff;  
+}
+.controlsBx{
+  position: relative;
 }
