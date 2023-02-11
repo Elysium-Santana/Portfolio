@@ -8,7 +8,7 @@
   box-sizing: border-box;
   z-index:3;
   top: 0;
-  padding: 1rem 2rem ;
+  padding: .5rem 2rem ;
   width: 100%;
 }
 .navMenu {
@@ -158,6 +158,7 @@
   }
   .header button{    
     display: flex;
+    padding-top: 8px;
     background-color: transparent;    
     border: none;
     height: 40px;
@@ -188,11 +189,11 @@
   } 
   .hamburgerBx.active .hamburger::after{
     transform: rotate(-135deg);
-    top: 5px;
+    top: 1px;
   }
   .hamburgerBx.active .hamburger::before{
     transform: rotate(135deg);    
-    top: 17px;    
+    top: 13px;    
   }
   .hamburgerBx.active .hamburger{
     background-color:transparent;  
@@ -200,21 +201,26 @@
 }
 @media(max-width: 800px){
   .skew.skew.active{
-    /* left: -122px */
     width: 180%;
   }
   .skew{
     width: 80%;
     left: -150px;
   }
+  .logo{
+    width: 80px;
+    margin: 0;
+   }
   
 }
 @media(max-width:380px){
   .skew{
     width: 100%;
   }
-  .logo{
-    margin-left: 2rem;
+  
+  .header{
+    padding: .3rem .6rem;
   }
+  
 }
  

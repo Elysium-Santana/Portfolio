@@ -1,7 +1,6 @@
 .sobreMim {
   background-color: var(--preto);
   color: #fff;
-
 }
 
 .sobreMimContent {
@@ -9,5 +8,22 @@
   background-color: var(--background_1);
   border-radius: 15px;
   margin: 2rem 0;
+}
+@media(max-width:600px){
+  .sobreMimContent {
+    padding: 2rem ;
+  }
+  .sobreMim p{
+    font-size: .9rem;
+  }
+}
+@media(max-width:400px){
+  .sobreMimContent {
+    padding: 1rem ;
+    margin-top: 1rem;
+  }
+  .sobreMim p{
+    font-size: .7rem;
+  }
 }
 

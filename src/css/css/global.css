@@ -96,31 +96,30 @@ img {
 /* ------------------------------------------------------ */
 @media(max-width:600px){
   .title {
-    font-size: 2.3rem;
+    font-size: 2.7rem;
     color: white;
     line-height: .875;
     display: inline-block;
     margin-bottom: 0.3rem;
     z-index: 1;
   }  
-  .btnConteiner{    
-    grid-template-columns: 140px 140px;    
-    width:280px;
-    padding: 0;    
-    height: 1.7rem;  
-  }
+  
 }
 @media(max-width:450px){
   .title {
-    font-size: 1.8rem;    
+    font-size: 2.4rem;    
     margin-bottom: 0.3rem;
   }  
-  .btnConteiner a{
-    font-size: .8rem;
-  }    
+  .section {
+    padding: 1rem;
+  }
   .btnConteiner{    
     grid-template-columns: 110px 110px;    
-    width:220px;
-    height: 1.5rem;  
+    width:210px;
+    padding: 0;    
+    height: 1.7rem;  
+  }
+  .btnConteiner a{
+    font-size: .8rem;
   }
 }

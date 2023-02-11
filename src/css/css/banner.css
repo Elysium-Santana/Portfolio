@@ -70,6 +70,9 @@
   .banner{
     justify-content: center;
   }
+  .bannerContent{
+    padding: 1rem 2rem;
+  }
 
 }
 @media(max-width:370px){
