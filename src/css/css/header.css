@@ -221,6 +221,18 @@
   .header{
     padding: .3rem .6rem;
   }
+  #topo::after{   
+    width: 50px;
+    height: 50px;
+    top: -11px;
+    left: -10px;     
+  }
+  #topo{
+    
+    margin: 5rem  .7rem;
+    width: 35px;
+    height: 35px;
+  }
   
 }
  

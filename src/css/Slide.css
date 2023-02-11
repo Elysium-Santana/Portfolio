@@ -7,7 +7,6 @@
 }
 .wrapper {
   overflow: hidden;
-  margin-top: 3rem;
 }
 [data-control="slide"] {
   display: flex;
@@ -52,30 +51,77 @@
   opacity: 1;
   transform: scale(1);
 }
-.arrow-nav {
-  
+.controls {  
+  position: relative;
   display: flex;
   width: 100%;
   align-items: center;
   margin:0 auto;
+  padding-top: 2rem;
 }
-.arrow-nav button {
+ .projetos button {
   position: absolute;
-  top:-400px;
-  right: 0;
-  margin:10rem;
+  /* margin: 1rem; */
+  z-index: 3;
+  top:calc( 50% + 40px );  
   cursor: pointer;
   border: none;  
   color: white;
   width:40px;
   height: 40px;
   background:  url("../img/slide/arrow.svg") center  center no-repeat;  
-  transform:scaleX(-1);  
-  
 }
 
-.arrow-nav button.prev {
-  left: 0 ;
-  transform:scaleX(1)
-  
+.projetos  .next  {
+  left: calc(50% + 270px);
+  transform:scaleX(-1)
 }
+.projetos  .prev  {
+  right: calc(50% + 270px);   
+}
+@media(max-width:640px){
+  .projetos  .next  {
+    left: calc(50% + 250px);
+    transform:scaleX(-1)
+  }
+  .projetos  .prev  {
+    right: calc(50% + 250px);   
+  }  
+}
+
+@media(max-width:600px){
+  .projetos  .next  {
+    left: calc(50% + 220px);
+    transform:scaleX(-1)
+  }
+  .projetos  .prev  {
+    right: calc(50% + 220px);   
+  }  
+  .custom-controls li {    
+    transform: scale(0.8);
+    width: 30px;
+    height: 30px;      
+    margin: 2px;    
+  }
+}
+@media(max-width:540px){
+  .projetos  .next  {
+    left: calc(50% + 200px);
+    transform:scaleX(-1)
+  }
+  .projetos  .prev  {
+    right: calc(50% + 200px);   
+  }  
+}
+
+@media(max-width:490px){
+  .projetos  button{
+    display: none;
+  }
+  .custom-controls li {    
+    transform: scale(0.8);
+    width: 20px;
+    height: 20px;      
+  }
+}
+

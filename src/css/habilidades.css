@@ -345,9 +345,7 @@
     transform: translateY(0) rotate(90deg);
   }
 }
-.projetos {
-  background-color: #544523;
-}
+
 .logos {
   cursor: pointer;
   transform: scale(0.3);

@@ -1,4 +1,12 @@
 
+.projetos>h1 {
+  margin-left: 3rem;
+}
+.projetos {
+  position: relative;
+  background-color: #544523;
+  padding: 4rem 0;
+}
 .cardContent .btnConteiner{
   margin: 0 auto;
 }
@@ -8,16 +16,17 @@
   width: 80vw;
   max-width: 500px;
   max-height:500px;
-  margin: 20px;
+  margin: 10px;
   border-radius: 10px;
   opacity: 0.8;
   transform: scale(0.8);
   transition: 0.4s;
   overflow: hidden;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr auto;
   background-color: #1E201D;  
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4);
+  padding-bottom: 1rem;
 cursor: pointer;
 }
 .cardContent>h2{
@@ -28,9 +37,83 @@ color:#A97E2F;
   font-size: .7rem;
 }
 .cardContent{
-  padding: 1rem 2rem;  
+  padding: 1rem 2rem; 
+   
   color: #fff;  
 }
 .controlsBx{
   position: relative;
+}
+@media(max-width:640px){
+  .card{    
+    max-width: 400px;    
+  }
+  .cardContent h2{
+    font-size: 1rem;
+  }
+  .cardContent p{
+    margin-bottom: .4rem;
+  }
+  .cardContent{
+    padding: .5rem 1rem; 
+  }
+}
+@media(max-width:540px){
+  .card{
+    max-width: 320px;
+  } 
+  .cardContent p{
+    margin-bottom: .7rem;
+    line-height: 1;
+  }
+  .cardContent .btnConteiner{    
+    grid-template-columns: 110px 110px;    
+    width:210px;
+    padding: 0;    
+    height: 1.7rem;  
+  }
+   .btnConteiner a{
+    font-size: .8rem;
+  }
+}
+@media(max-width:440px){
+  .card{
+    max-width:250px;
+  }
+  
+  .cardContent{
+    padding: .5rem 1rem;  
+  }
+  .cardContent .btnConteiner{    
+    grid-template-columns: 80px 80px;    
+    width:160px;
+    height: 1rem;
+  }
+  .btnConteiner a{
+    font-size: .6rem;
+  }  
+}
+@media(max-width:350px){
+  .card{
+    max-width:180px;
+  }  
+  .cardContent h2{
+    font-size: .8rem;
+  }
+  .cardContent p{
+    font-size: .5rem;
+    margin-bottom: .4rem;
+    line-height: .8;
+  }
+  .cardContent{
+    padding: .3rem .8rem; 
+  }
+  .cardContent .btnConteiner{    
+    grid-template-columns: 70px 70px;    
+    width:140px;
+    height: .8rem;
+  }
+  .btnConteiner a{
+    font-size: .5rem;
+  }  
 }
