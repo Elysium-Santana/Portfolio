@@ -1,39 +1,6 @@
 
-.projectLinkBx:first-child a{
-  position: relative;
-  left: 15px;
-}
-.projectLinkBx:hover .projectLink {
-  color: #544523;
-
-}
-.projectLinkBx:hover {
-  background-color: #a97e2f; 
-}
-.projectLinkBx{
-  position: relative;
-  left: -15px;
-  transition: .4s;
-  padding: .2rem 3rem;
-  margin: 0;
-  border-left: #a97e2f 3px solid;
-  justify-items: center;
-  text-align: center;
-  align-items: center;  
-}
-.btnConteiner{
-  transition: .4s;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  padding: .2rem 1rem;
-  border: 2px solid #a97e2f;
-  border-radius: 25px 25px;
+.cardContent .btnConteiner{
   margin: 0 auto;
-  color: #a97e2f;
-  height: 2rem;  
 }
 .card{
   z-index: 10;

@@ -12,7 +12,8 @@
 <body>
   <a id="topo" href="#header"></a>
   <section class="conteiner">
-    <header id="header" class="header conteiner">
+
+    <header id="header" class="header ">
       <a href="#" class="logo"><img src="./src/img/Logo.svg" alt=""></a>
       <button class="hamburgerBx" aria-haspopup="true" aria-expanded="false" aria-label="Abrir" aria-controls="navMenu">
         <span class="hamburger"></span>
@@ -20,23 +21,35 @@
       <nav class="navMenu">
         <ul>
           <li><a href="#sobre" class="btn principal_color_component">Sobre</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li style="--i:1"><a href="#habilidades">Habilidades</a></li>
+          <li style="--i:2"><a href="#projetos">Projetos</a></li>
+          <li style="--i:3"><a href="#contato">Contato</a></li>
         </ul>
       </nav>
     </header>
-    <section class="section banner">
+
+    <section class="banner ">
+
+      <div class="videoLoopBx">
+        <video class="videoLoop" muted loop autoplay>
+          <source src="./src/img/Motion Background Plexus Moving Animated Lines HD Backdrop.mp4">
+        </video>
+      </div>
+      <div class="skew "></div>
 
       <div class="bannerContent">
-        <h1 class="title">OLÁ, <br> EU SOU O ELISIO.</h1>
-        <p class="txt_type1">DESENVOLVEDOR FRONT-END</p>
-        <p class="txt_type2">TENHO EXPERIÊNCIA COM PROJETOS PESSOAIS UTILIZANDO HTML, CSS, JAVASCRIPT E REACT . ESTOU SEMPRE BUSCANDO NOVAS OPORTUNIDADES DE APRENDIZADO E QUERO ME TORNAR UM PROFISSIONAL CADA VEZ MAIS QUALIFICADO.</p>
-        <a href="" class="btn principal_color_component">Saber Mais</a>
-      </div>
-      <div class="bannerContentAvatar">
-        <img class="avatarImg" src="./src/img/myAvatar.55b27e46.svg" alt="Avatar">
-      </div>
+        <h1 class="fadeInLeft title" data-anime="300">OLÁ, <br> EU SOU O </h1>
+        <span class="bgAnime title" data-anime="800" style="margin-left: .6rem;"> ELISIO.</span>
+        <p class=' fadeInUp' data-anime="600">DESENVOLVEDOR FRONT-END</p>
+        <p class=' fadeInRight' data-anime="400">TENHO EXPERIÊNCIA COM PROJETOS PESSOAIS UTILIZANDO <span style="color: var(--principal_1); font-weight: 900;">HTML, CSS, JAVASCRIPT E REACT.</span> ESTOU SEMPRE BUSCANDO NOVAS OPORTUNIDADES DE APRENDIZADO E QUERO ME TORNAR UM PROFISSIONAL CADA VEZ MAIS QUALIFICADO.</p>
+
+
+        <ul class="btnConteiner fadeInLeft" data-anime="800">
+          <li class="projectLinkBx"><a class="projectLink">Baixar Cv</a></li>
+          <li class="projectLinkBx"><a class="projectLink">Contato</a></li>
+        </ul>
+
+
     </section>
     <section id="sobre" class="sobreMim section">
       <h1 class="title">SOBRE MIM</h1>
@@ -204,7 +217,7 @@
 
       </div>
 
-      <script type="module" src="./src/JS/script.js"></script>
+      <script type="module" src="./script.js"></script>
 
 
     </section>

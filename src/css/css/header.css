@@ -1,0 +1,220 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: var(--principal_2);
+  border-bottom: #a97e2f 2px solid;
+  box-sizing: border-box;
+  z-index:3;
+  top: 0;
+  padding: 1rem 2rem ;
+  width: 100%;
+}
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  overflow: hidden;
+  
+}
+.logo {
+  color: white;
+  font-size: 2rem;
+  font-family: arial;
+  margin-left: 1rem;
+}
+.navMenu ul {
+  display: flex;
+  gap: .5rem;
+}
+.navMenu a:hover{
+  border: #a97e2f 2px solid;  
+}
+.navMenu a{
+  display: block;
+  border-radius: 25px 25px;
+  transition: .3s;
+  color: #a97e2f;
+  padding: .5rem 1rem ;
+  border: transparent 2px solid;
+}
+.header button{
+  display: none;
+}  
+#topo:hover{
+  transform: scale(1.2);
+}
+#topo::after{
+  position: relative;
+  content: '';
+  background: url('../../img/slide/arrow.svg')no-repeat center center;
+  transform: rotate(90deg)  scale(0.6);
+  width: 50px;
+  height: 50px;
+  top: -6px;
+  left: -5px;
+  display: block;  
+}
+#topo{
+  border: #a97e2f solid 2px;
+  position: fixed;  
+  opacity: 0;
+  transition: .4s;
+  margin: 5rem  .7rem;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  bottom: 30%;
+  right: 0;
+  background-color: var(--principal_2);  
+  cursor: pointer;
+  z-index: 11;
+}
+#topo.active {
+  opacity: 1;  
+  bottom:40%;
+}
+.skew{
+  border-right: #a97e2f 5px solid;
+  position: absolute;
+  z-index: -1;
+  top:0;
+  left: -200px;
+  width: 65%;
+  height: 100%;
+  background-color: rgba(84, 69, 35, 0.2);
+  backdrop-filter: blur(10px);
+  transform: skew(-20deg ) ;
+  transition: .4s;
+  /* animation: moveArrow 20s ease-in-out infinite; */
+}
+@media(max-width: 1000px){
+  .header button{
+    visibility: visible;
+  }
+  .header{
+    position: relative;    
+  }
+  .hamburgerBx.active + .navMenu li{
+    transition-delay: calc(0.12s * var(--i));
+    left: 0;
+  }
+  .hamburgerBx.active + .navMenu{
+    
+    visibility: visible;
+    /* background-color:red ;     */
+    width: 100%;
+  }
+  .skew{
+    border-right: var(--principal_2) 5px solid;
+    position: absolute;
+    z-index: -1;
+    top:0;
+    width: 70%;
+    height: 100%;
+    background-color: rgba(84, 69, 35, 0.2);
+    backdrop-filter: blur(10px);
+    transform: skew(-20deg ) ;
+    transition: .4s;
+    /* animation: moveArrow 20s ease-in-out infinite; */
+  }
+   .skew.active{
+    width: 150%;
+    z-index: 2;
+  }
+  .navMenu{ 
+    transition: .4s;
+    visibility: hidden;  
+    position: absolute;
+    top: 81px;
+    left: 0;    
+    width: 0%;
+    height: 100vh;
+    justify-content: center;
+    align-items: start;
+    padding: 0;
+    padding: 0;
+    overflow-y: hidden;
+  }  
+  .navMenu ul{
+    width: 100%;
+    flex-direction: column;   
+    text-align: center;
+    margin-top: 4rem;   
+    justify-content: center;
+    gap: 0;
+  }    
+  .navMenu ul li a{
+    margin: 1rem 3rem;
+  }
+  .navMenu ul li{
+    position: relative;
+    transition: .4s;
+    left: -200px;
+    border-bottom: var(--principal_2) solid 2px;
+    align-items: center; 
+    justify-content: center;   
+  }
+  .header button{    
+    display: flex;
+    background-color: transparent;    
+    border: none;
+    height: 40px;
+    cursor: pointer;  
+    overflow: hidden;  
+  }
+  .header button span{
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: var(--principal_1); 
+    transition: .2s; 
+    border-radius: 12px ;
+  }   
+  .header button span::before,
+  .header button span::after{
+    position: relative;
+    display: block;
+    content: '';
+    width: 35px;
+    height: 4px;
+    border-radius: 12px ;
+    background-color:#a97e2f;  
+    top: 12px;
+    margin-bottom: 8px;
+    transition: .3s;
+  } 
+  .hamburgerBx.active .hamburger::after{
+    transform: rotate(-135deg);
+    top: 5px;
+  }
+  .hamburgerBx.active .hamburger::before{
+    transform: rotate(135deg);    
+    top: 17px;    
+  }
+  .hamburgerBx.active .hamburger{
+    background-color:transparent;  
+  }  
+}
+@media(max-width: 800px){
+  .skew.skew.active{
+    /* left: -122px */
+    width: 180%;
+  }
+  .skew{
+    width: 80%;
+    left: -150px;
+  }
+  
+}
+@media(max-width:380px){
+  .skew{
+    width: 100%;
+  }
+  .logo{
+    margin-left: 2rem;
+  }
+}
+ 

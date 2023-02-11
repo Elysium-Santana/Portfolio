@@ -1,30 +1,35 @@
-export default function toggleMenu(event) {
+import animateItems from './simple-anime.js';
+export default function toggleMenu() {
   const hamburgerBx = document.querySelector('.hamburgerBx');
   const navMenu = document.querySelector('.navMenu');
+  const skew = document.querySelector('.skew');
   const topoBtn = document.querySelector('#topo');
 
-  function toggleMenu(event) {
+  function toggleMenu() {
     hamburgerBx.classList.toggle('active');
+    animateItems();
     const active = hamburgerBx.classList.contains('active');
     hamburgerBx.setAttribute('aria-expanded', active);
     if (active) {
       hamburgerBx.setAttribute('aria-label', 'Fechar Menu');
+      skew.classList.add('active');
     } else {
+      skew.classList.remove('active');
       hamburgerBx.setAttribute('aria-label', 'Abrir Menu');
     }
   }
-
-  function removeMenu(event) {
+  function removeMenu() {
     if (hamburgerBx.classList.contains('active')) {
       hamburgerBx.classList.remove('active');
+      skew.classList.remove('active');
+      animateItems();
     }
   }
 
   navMenu.addEventListener('click', toggleMenu);
   hamburgerBx.addEventListener('click', toggleMenu);
   document.addEventListener('scroll', removeMenu);
-
-  //decidi criar esse evento separadamente.
+  // decidi criar esse evento separadamente.
   document.addEventListener('scroll', () => {
     if (window.scrollY > 350) {
       topoBtn.classList.add('active');
