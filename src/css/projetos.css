@@ -52,7 +52,7 @@ color:#A97E2F;
     font-size: 1rem;
   }
   .cardContent p{
-    margin-bottom: .4rem;
+    margin-bottom: .7rem;
   }
   .cardContent{
     padding: .5rem 1rem; 
@@ -63,7 +63,6 @@ color:#A97E2F;
     max-width: 320px;
   } 
   .cardContent p{
-    margin-bottom: .7rem;
     line-height: 1;
   }
   .cardContent .btnConteiner{    
@@ -99,6 +98,7 @@ color:#A97E2F;
   }  
   .cardContent h2{
     font-size: .8rem;
+    margin-bottom:.6rem ;
   }
   .cardContent p{
     font-size: .5rem;
