@@ -1,10 +1,10 @@
 /* ____________Global________________ */
-@import url('./css/global.css');
+@import url('./global.css');
 /* _______________Banner_______________ */
-@import url('./css/banner.css');
+@import url('./banner.css');
 /* _______________Header_______________________ */
-@import url('./css/header.css');
-@import url('./css/animações.css');
+@import url('./header.css');
+@import url('./animações.css');
 /* ------------Section--sobre mim-------------- */
 @import url('./sobreMim.css');
 /* Section Habilidades */

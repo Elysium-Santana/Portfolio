@@ -8,7 +8,8 @@
   box-sizing: border-box;
   z-index:3;
   top: 0;
-  padding: 1rem 2rem ;
+  padding: .5rem 2rem ;
+  width: 100%;
 }
 .navMenu {
   display: flex;
@@ -21,6 +22,7 @@
   color: white;
   font-size: 2rem;
   font-family: arial;
+  margin-left: 1rem;
 }
 .navMenu ul {
   display: flex;
@@ -46,15 +48,13 @@
 #topo::after{
   position: relative;
   content: '';
-  background: url('../img/slide/arrow.svg')no-repeat center center;
+  background: url('../img/arrow.svg')no-repeat center center;
   transform: rotate(90deg)  scale(0.6);
   width: 50px;
   height: 50px;
   top: -6px;
-  left: -10px;
-  display: block;
-  align-items: center;
-  justify-content: center;
+  left: -5px;
+  display: block;  
 }
 #topo{
   border: #a97e2f solid 2px;
@@ -62,8 +62,8 @@
   opacity: 0;
   transition: .4s;
   margin: 5rem  .7rem;
-  border-radius: 10px;
-  width: 34px;
+  border-radius: 50%;
+  width: 44px;
   height: 44px;
   bottom: 30%;
   right: 0;
@@ -75,6 +75,20 @@
   opacity: 1;  
   bottom:40%;
 }
+.skew{
+  border-right: #a97e2f 5px solid;
+  position: absolute;
+  z-index: -1;
+  top:0;
+  left: -200px;
+  width: 65%;
+  height: 100%;
+  background-color: rgba(84, 69, 35, 0.2);
+  backdrop-filter: blur(10px);
+  transform: skew(-20deg ) ;
+  transition: .4s;
+  /* animation: moveArrow 20s ease-in-out infinite; */
+}
 @media(max-width: 1000px){
   .header button{
     visibility: visible;
@@ -82,24 +96,45 @@
   .header{
     position: relative;    
   }
+  .hamburgerBx.active + .navMenu li{
+    transition-delay: calc(0.12s * var(--i));
+    left: 0;
+  }
   .hamburgerBx.active + .navMenu{
+    
     visibility: visible;
-    background-color: rgba(84, 69, 35, 0.5);
+    /* background-color:red ;     */
+    width: 100%;
+  }
+  .skew{
+    border-right: var(--principal_2) 5px solid;
+    position: absolute;
+    z-index: -1;
+    top:0;
+    width: 70%;
+    height: 100%;
+    background-color: rgba(84, 69, 35, 0.2);
     backdrop-filter: blur(10px);
-    height: 100vh;
+    transform: skew(-20deg ) ;
+    transition: .4s;
+    /* animation: moveArrow 20s ease-in-out infinite; */
+  }
+   .skew.active{
+    width: 150%;
+    z-index: 2;
   }
   .navMenu{ 
+    transition: .4s;
     visibility: hidden;  
     position: absolute;
     top: 81px;
     left: 0;    
-    width: 100%;
-    height: 0;
+    width: 0%;
+    height: 100vh;
     justify-content: center;
     align-items: start;
     padding: 0;
     padding: 0;
-    transition: .4s;
     overflow-y: hidden;
   }  
   .navMenu ul{
@@ -114,12 +149,16 @@
     margin: 1rem 3rem;
   }
   .navMenu ul li{
+    position: relative;
+    transition: .4s;
+    left: -200px;
     border-bottom: var(--principal_2) solid 2px;
     align-items: center; 
     justify-content: center;   
   }
   .header button{    
     display: flex;
+    padding-top: 8px;
     background-color: transparent;    
     border: none;
     height: 40px;
@@ -150,17 +189,50 @@
   } 
   .hamburgerBx.active .hamburger::after{
     transform: rotate(-135deg);
-    top: 5px;
+    top: 1px;
   }
   .hamburgerBx.active .hamburger::before{
     transform: rotate(135deg);    
-    top: 17px;    
+    top: 13px;    
   }
   .hamburgerBx.active .hamburger{
     background-color:transparent;  
+  }  
+}
+@media(max-width: 800px){
+  .skew.skew.active{
+    width: 180%;
+  }
+  .skew{
+    width: 80%;
+    left: -150px;
+  }
+  .logo{
+    width: 80px;
+    margin: 0;
+   }
+  
+}
+@media(max-width:380px){
+  .skew{
+    width: 100%;
   }
   
+  .header{
+    padding: .3rem .6rem;
+  }
+  #topo::after{   
+    width: 50px;
+    height: 50px;
+    top: -11px;
+    left: -10px;     
+  }
+  #topo{
     
+    margin: 5rem  .7rem;
+    width: 35px;
+    height: 35px;
+  }
   
 }
  

@@ -115,6 +115,7 @@ export default function selectAbility() {
           certifiedLogoImgBx.innerHTML = svgString;
           const certifiedLogoImg = certifiedLogoImgBx.querySelector('svg');
           certifiedLogoImg.classList.add('certifiedLogoImg');
+          console.log(attributeSrc);
           const tech = attributeSrc
             .replace('./src/img/', '')
             .replace('.svg', '')
@@ -122,7 +123,6 @@ export default function selectAbility() {
           let index = certifieds.findIndex(
             (certified) => certified.tecnologia === tech,
           );
-          console.log(certifieds[index].tecnologia);
 
           document.querySelector('.tech').innerHTML =
             certifieds[index].tecnologia;

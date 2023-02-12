@@ -6,11 +6,12 @@
   list-style: none;
   text-decoration: none;
 }
-
 body {
+  /* display: flex; */
   background-color: black;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
-
 :root {
   --principal_1: #a97e2f;
   --principal_2: #544523;
@@ -19,53 +20,36 @@ body {
   --cinza_medio: #aba8a2;
   --preto: #0b0906;
 }
-
 img {
   display: block; 
   max-width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-.conteiner {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 .title {
   font-size: 3.3rem;
   color: white;
-  line-height: 1;
-  display: inline;
+  line-height: .875;
+  display: inline-block;
   margin-bottom: 0.3rem;
-  position: relative;
-  z-index: 2;
+  z-index: 1;
 }
-
 .title::before {
   content: '';
   display: block;
   position: absolute;
   width: 77px;
   height: 67px;
-  background: url('../img/coluna1.svg');
   z-index: -1;
   left: -30px;
   top: 30px;
   opacity: 50%;
 }
-
-.txt_type2 {
-  font-size: 1rem;
-  color: white;
-  margin-bottom: 2rem;
+.conteiner{ 
+  max-width: 1200px;
+  margin: 0 auto;
+    
 }
-
-.txt_type1 {
-  font-size: 1.2rem;
-  color: #aba8a2;
-  margin-bottom: 2rem;
-}
-
 .section {
   padding: 1rem 3rem;
   justify-content: center;
@@ -77,3 +61,67 @@ img {
   padding-bottom: 5rem;
 }
 /* _____________________________________________________________ */
+
+.projectLinkBx:hover .projectLink {
+  color: #544523;
+}
+.projectLinkBx:hover {
+  background-color: #a97e2f; 
+}
+.btnConteiner li:last-child{
+  border-left: #a97e2f 3px solid;
+}
+.projectLinkBx{
+  display: flex;  
+  transition: .4s;
+  padding: .7rem;
+  margin: 0;
+  justify-content: center;
+  text-align: center;
+  align-items: center;  
+}
+.btnConteiner{
+  cursor: pointer;
+  transition: .4s;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 150px 150px;
+  justify-content: center;
+  align-content: center;
+  width: 300px;
+  padding: .2rem 1rem;
+  border: 2px solid #a97e2f;
+  border-radius: 25px 25px;
+  color: #a97e2f;
+  height: 2rem;  
+}
+/* ------------------------------------------------------ */
+@media(max-width:600px){
+  .title {
+    font-size: 2.7rem;
+    color: white;
+    line-height: .875;
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    z-index: 1;
+  }  
+  
+}
+@media(max-width:450px){
+  .title {
+    font-size: 2.4rem;    
+    margin-bottom: 0.3rem;
+  }  
+  .section {
+    padding: 1rem;
+  }
+  .btnConteiner{    
+    grid-template-columns: 110px 110px;    
+    width:210px;
+    padding: 0;    
+    height: 1.7rem;  
+  }
+  .btnConteiner a{
+    font-size: .9rem;
+  }
+}

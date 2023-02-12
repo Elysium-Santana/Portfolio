@@ -71,7 +71,7 @@ color:#A97E2F;
     padding: 0;    
     height: 1.7rem;  
   }
-   .btnConteiner a{
+  .cardContent  .btnConteiner a{
     font-size: .8rem;
   }
 }
@@ -88,7 +88,7 @@ color:#A97E2F;
     width:160px;
     height: 1rem;
   }
-  .btnConteiner a{
+  .cardContent  .btnConteiner a{
     font-size: .6rem;
   }  
 }
@@ -98,7 +98,7 @@ color:#A97E2F;
   }  
   .cardContent h2{
     font-size: .8rem;
-    margin-bottom:.6rem ;
+    margin-bottom:.2rem ;
   }
   .cardContent p{
     font-size: .5rem;
@@ -111,9 +111,9 @@ color:#A97E2F;
   .cardContent .btnConteiner{    
     grid-template-columns: 70px 70px;    
     width:140px;
-    height: .8rem;
+    height: .9rem;
   }
-  .btnConteiner a{
-    font-size: .5rem;
+  .cardContent  .btnConteiner a{
+    font-size: .6rem;
   }  
 }

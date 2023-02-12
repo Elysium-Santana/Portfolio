@@ -15,6 +15,7 @@
   }
   .sobreMim p{
     font-size: .9rem;
+    line-height: 1.1;
   }
 }
 @media(max-width:400px){
