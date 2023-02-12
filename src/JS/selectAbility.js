@@ -107,9 +107,10 @@ export default function selectAbility() {
     });
     if (!target.classList.contains('voltarBtn')) {
       const attributeSrc = target.getAttribute('src');
+      const attributeSrcCorrect = attributeSrc.replace('./src/img/', '../img/');
       target.classList.add('target');
 
-      fetch(`.${attributeSrc}`)
+      fetch(`${attributeSrcCorrect}`)
         .then((response) => response.text())
         .then((svgString) => {
           certifiedLogoImgBx.innerHTML = svgString;
