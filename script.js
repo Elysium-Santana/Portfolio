@@ -1,5 +1,5 @@
 import { SlideNav } from './src/JS/slide.js';
-import selectAbility from './src/JS/selectAbility.js';
+import selectAbility from './src/img/selectAbility.js';
 import ScrollSuave from './src/JS/scroll-suave.js';
 import toggleMenu from './src/JS/toggleMenu.js';
 import animateItems from './src/JS/simple-anime.js';
