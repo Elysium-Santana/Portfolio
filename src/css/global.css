@@ -6,6 +6,23 @@
   list-style: none;
   text-decoration: none;
 }
+/* ---------------------- */
+.status{
+  padding: 1rem;
+  background-color: #aba8a2;
+  border: #a97e2f solid 2px;
+  position: fixed;
+  z-index: 10;
+}
+.statusW{
+  top:0;
+  right: 0;
+}
+.statusW{
+  top:20px;
+  right: 0;
+}
+/* ------------------------------ */
 body {
   /* display: flex; */
   background-color: black;

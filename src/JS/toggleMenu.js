@@ -4,7 +4,19 @@ export default function toggleMenu() {
   const navMenu = document.querySelector('.navMenu');
   const skew = document.querySelector('.skew');
   const topoBtn = document.querySelector('#topo');
+  const statusW = document.querySelector('.statusW');
+  const statusH = document.querySelector('.statusH');
+  // =======================================
+  function updateScreenSize() {
+    statusW.innerHTML = ` width ${window.innerWidth}`;
+    statusH.innerHTML = ` height ${window.innerHeight}`;
+  }
 
+  window.addEventListener('resize', updateScreenSize);
+
+  updateScreenSize();
+
+  // ===============================================
   function toggleMenu() {
     hamburgerBx.classList.toggle('active');
     animateItems();
