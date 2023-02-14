@@ -8,42 +8,50 @@
   display: flex;
   flex-direction: column;
   justify-self: center;
+  /* align-items: center; */
+  
 }
 .abilitySectionBx{
   position: relative;
-  width: 100%;
+  max-width: 1000px;
   display: grid;
   padding: 1rem;
   align-items: center;
   justify-items: center;
+  border: 2px solid black;
+  margin: 4rem 0;
+  overflow: hidden;
 }
 .abilityContent_Icons{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;  
+  grid-template-columns: repeat(4 , 1fr);
   grid-area: 1/1;
-  padding: 5rem;
-  width: 100%;
-  max-width:1000px; 
+  padding: 1rem 3rem;
+  max-width: 100%;  
   gap:4rem;
-  justify-content: center;
-  align-content: space-around;
+  justify-items: center;
+  align-items: center;
   justify-self: center;
+  border: 2px solid red;
 }
 .abilityContent_Certified{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:1fr 1fr;
+  padding:1rem ;
   grid-area: 1/1;
   gap: .5rem;
-  max-width:1000px;
-  width: 100%;
+  width: 100%;  
+  max-height: 100%;  
   align-items: center;
   justify-content: center;
-  align-self: center;
-
+  border: 2px solid brown;
+  
+  
 }
 .logos{
 object-fit: contain;
-width:120px;
+max-width:120px;
+width: 100%;
 height: auto;
 cursor: pointer;
 transform: scale(0.3);
@@ -70,7 +78,7 @@ visibility: hidden;
 }
 .certifiedLogoImg{
   width: 100%;
-  height:auto;
+  height:100%;
 }
 .certifiedDocument,
 .certifiedLogo {
@@ -79,7 +87,7 @@ visibility: hidden;
   transition: .6s;
 }
 .certifiedLogo{  
-  width: 100%;
+  width:100%;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -87,8 +95,6 @@ visibility: hidden;
   border: #A97E2F solid 4px;
   border-radius: 8px;
   height: 100%;
-  max-width: 350px;
-  justify-self: right;
 }
 .certifiedDocument:hover .certifiedDocumentContentTop{
   height: 30%;
@@ -111,13 +117,13 @@ visibility: hidden;
  opacity: 1;
 }
 .certifiedDocument:hover .imgbx{
- left:10px;
+ left:0;
 }
 .certifiedDocument{  
   display: flex;
   flex-direction: column;
   position: relative;
-  max-width: 350px;
+  width: 100%;
   height: 100%;
   gap: .5rem;
   transition: .4s;
@@ -125,7 +131,6 @@ visibility: hidden;
 .imgbx{
   display: flex;
   justify-items: center;
-  width: max-content;  
   height:100%;
   position: relative;
   left:calc(50% - 50px);
@@ -158,6 +163,7 @@ visibility: hidden;
 }
 .contentBx{
   position: relative;
+  display: none;
   left: 50%;
   opacity: 0;
   transition: .4s;
@@ -334,14 +340,9 @@ display: inline-block;
   }
   .abilityContent_Certified{
     padding: 1rem;
-    max-width:800px;
-    width: 100%;
-  }
-  .certifiedDocument,.certifiedLogo{
-    max-width: 300px;
-  }
+  }  
   .abilityContent_Icons{
-    padding: 5rem 3rem;
+    padding: 3rem 3rem;
   }
   .logos{
       width:100px;
@@ -356,6 +357,17 @@ display: inline-block;
 }
 
 @media(max-width:800px){
+  .abilityContent_Icons{
+    max-width: 100%;
+    width: 100%;
+    padding: 1rem ;
+    justify-content: space-between;
+    align-content: space-between;
+    gap: 5rem 2rem;
+  }
+  .abilitySection{
+    padding:.5rem;
+  }
   .slideY{
     padding: 0 1rem;
   }  
@@ -385,17 +397,7 @@ display: inline-block;
   }  
   .certifiedLogo,.certifiedDocumentContentTop,.certifiedDocumentContentDetails{
     border-radius: 6px;
-  }
-  .certifiedLogoImg{
-    max-height:200px;
-  }  
-  .abilityContent_Icons{
-    padding: 3rem 1rem;
-    gap: 1.5rem;
-    }  
-    .certifiedDocument,.certifiedLogo{
-      max-width: 250px;
-    }
+  }      
     .voltarBtn,.certifiedLogo::before{
       scale: .8;
     }
@@ -412,6 +414,13 @@ display: inline-block;
     
 }
 @media(max-width:600px){
+  .abilityContent_Icons{
+    padding: .5rem ;
+    gap: 5rem 1rem;
+  }
+  .abilitySectionBx{
+    padding: .5rem;
+  }
   .slideY li span::before{
     height: 6px;
     width: 4px;    
@@ -430,8 +439,11 @@ display: inline-block;
   
   .horas::after{
     font-size: .3rem;
-    top: -40px;
-   
+    top: -40px;   
+  }
+  .logos{    
+    max-width:80px;
+    width: 100%;
   }
   .horas::before{
     font-size: .5rem;
@@ -442,18 +454,13 @@ display: inline-block;
   }  
   .abilityContent_Certified{
     gap: .3rem;
-    padding: 0;
-  }
-  .certifiedDocument,.certifiedLogo{
-    max-width:150px;
-    gap: .3rem;
-  } 
-  .logos{
-    width:75px;
-  }
+    padding: 0 
+  }  
   .abilityContent_Icons{
-    gap: .5rem;
-    padding: 2rem .5rem;
+   gap: 1rem;
+   padding: 0;
+   height: 100%;
+   align-content: space-around;
   }
   .certifiedLogo::before{
     scale: .6;
@@ -486,62 +493,8 @@ display: inline-block;
     border-radius: 4px;
   }
 } 
-@media(max-width:437px){
-  .slideY{
-    padding: 0 15px;
-  }
-  .certifiedDocument:hover .slideY{
-    top: 30%;
-  }
-  .slideY li span::before{
-    height: 6px;
-    width: 3px;    
-  }
-  .slideY li{
-    font-size: .3rem;
-  }  
-  .tech{
-    font-size: .8rem;
-  }
-  .slideY a{ 
-    margin-top: .15rem;
-    padding: 0 1rem;   
-    font-size: .3rem; 
-    border: solid 1px #A97E2F; 
-  }  
-  .horas::after{
-    font-size: .25rem;
-    top: -27px;
-  }
-  .horas::before{
-    font-size: .3rem;
-    bottom:  2px;
-    
-  }
-  .horas{
-    font-size: 1.5rem;
-  }  
-  .logos{
-    gap: .2rem;
-    width:50px;
-  }
-  .certifiedDocument,.certifiedLogo{
-    max-width:120px;
-  }
-  .contentBx h2{      
-    font-size: .6rem;
-    line-height: 1;  
-  }    
-  .contentBx{
-    margin-left: 20px;
-    left:40%;  }
-  .imgbx{
-    left:calc(50% - 15px);  
-    padding: 2px ; 
-  }
-  
-}
-@media(max-width:336px){
+@media(max-width:460px){
+
   .certifiedDocument:hover .slideY{
     top: 24%;
   }
@@ -573,28 +526,35 @@ display: inline-block;
     grid-template-rows: 1fr 1fr;
     justify-content: center;
     align-items: start;
-    padding: 0;    
+    padding: 0; 
+    max-width: 100%;   
+    width: 100%;
   }
-  .logos{
-    gap: .3rem;
-    width:77px;
+  .abilityContent_Icons{
+    grid-template-columns: 1fr 1fr;
+    padding:.5rem 2.5rem ;
+  }
+  .abilitySectionBx{
+    padding: 1rem 2rem;
   }  
-  .certifiedDocument,.certifiedLogo{
-    justify-self: center;
-    max-width:150px;
-    gap: .2rem;
-  }
   .imgbx{
     left:calc(50% - 20px);  
     padding: 2px ; 
   }  
-}
-@media(max-width:275px){
-.abilityContent_Icons{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  
+  .contentBx h2{      
+    font-size: .6rem;
+    line-height: 1;  
+  }    
+  .contentBx{
+    margin-left: 20px;
+    left:40%;  }
+  .imgbx{
+    left:calc(50% - 15px);  
+    padding: 2px ; 
   }
-  .abilitySection .title{
-    font-size: 1.8rem;
-  }
+  
 }
+  
+
+
