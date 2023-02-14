@@ -12,22 +12,24 @@
   justify-self: center;
   /* align-items: center; */
   
+  overflow: hidden;
 }
 .abilitySectionBx{
   position: relative;
   max-width: 1000px;
   display: grid;
-  padding: 1rem;
+  padding: 5rem 1rem;
   align-items: center;
+  align-self: center;
   justify-items: center;
-  margin: 4rem 0;
-  overflow: hidden;
+  /* margin: 4rem 0; */
 }
 .abilityContent_Icons{
   display: grid;  
   grid-template-columns: repeat(4 , 1fr);
   grid-area: 1/1;
-  padding: 1rem 3rem;
+  padding: 1rem ;
+  height: 100%;
   max-width: 100%;  
   gap:4rem;
   justify-items: center;
@@ -114,7 +116,7 @@ visibility: hidden;
  opacity: 1;
 }
 .certifiedDocument:hover .imgbx{
- left:0;
+ left:-20px;
 }
 .certifiedDocument{  
   display: flex;
@@ -126,17 +128,16 @@ visibility: hidden;
   transition: .4s;
 }
 .imgbx{
-  display: flex;
-  justify-items: center;
-  height:100%;
   position: relative;
-  left:calc(50% - 50px);
+  width: 100%;
+  height: 100%;
+  left: calc( 50% - 50px);
   transition: .4s;
 }
+
 .imgbx img{
-  display: block;
-  width: max-content; 
-  height:100%;
+  width: 120px;
+  height: 100%;
   object-fit: fill;
 }
 .certifiedDocumentContentTop{
@@ -167,15 +168,15 @@ visibility: hidden;
 }
 
 .certifiedDocument {
-  transform: translateX(100px);
+  transform: translateX(200px);
 }
 
 .certifiedLogo {
-  transform: translateX(-100px);
+  transform: translateX(-200px);
 }
 .certifiedDocumentContentDetails {
   position: relative;
-  overflow-y: hidden;
+  overflow: hidden;
   transition: .4s;
   display: flex;
   flex-direction: column;
@@ -191,28 +192,28 @@ visibility: hidden;
   color: var(--principal_1);
   position: absolute;
   display: inline-block;
-  font-size: 1.3rem;
-  bottom:0;
+  font-size: 1.2rem;
+  bottom:-8px;
+  right: 0;
 }
 .horas::after {
-  position: relative;
+  position: absolute;
   content: 'carga horária:';
   color: #aba8a2;
   display: inline-block;
   font-size: .8rem;
-  top:-4.5rem;  
-  /* left: -2px; */
+  top:-8px;  
+  right: 0;
 }
 .horas {
   display: flex;
   flex-direction: column;
   position: relative;
   color: #fff;
-  line-height: 1;
-  font-size: 4rem;
-  /* margin: .3rem; */
+  line-height: .825;
+  font-size: 6rem;
+  margin: .3rem;
   justify-self: center;
-  justify-items: center;
   color: #f7f7f8;
 }
 .certifiedLogo::before {
@@ -270,7 +271,7 @@ display: inline-block;
 .tech{
   transition: .4s;
   position: absolute;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: .825;
   top: 30%;
   scale: 1.6;
@@ -322,15 +323,23 @@ display: inline-block;
 
 
  @media(max-width:930px){
-  
+  .horas::before {    
+    font-size: 1rem;    
+  }
+  .horas::after {    
+    font-size: .6rem;   
+  }
+  .horas {    
+    font-size: 5rem;   
+  }  
   .certifiedDocumentContentDetails{
     padding: .3rem;
   }
   .certifiedDocument:hover .tech{   
-    top: 4px;
+    top: 1.2rem;
   }
   .certifiedDocument:hover .slideY{
-    top: 20%;
+    top: 25%;
   }  
   .contentBx h2{
     font-size: 1.3rem;   
@@ -341,6 +350,9 @@ display: inline-block;
   .abilityContent_Icons{
     padding: 3rem 3rem;
   }
+  .tech{
+    font-size: 1.8rem;
+  }
   .logos{
       width:100px;
     }
@@ -349,10 +361,8 @@ display: inline-block;
   }
   .voltarBtn{
     left: -35px;
-  }
-    
+  }    
 }
-
 @media(max-width:800px){
   .abilityContent_Icons{
     max-width: 100%;
@@ -364,51 +374,35 @@ display: inline-block;
   }
   .abilitySection{
     padding:.5rem;
-  }
-  .slideY{
-    padding: 0 1rem;
-  }  
+  }   
+  .certifiedDocument:hover .slideY{
+    top: calc(50% - 50px);
+    margin-top: .3rem;
+  }   
+  .certifiedDocument:hover .tech{   
+    top:1rem;
+  }   
   .slideY li{
-    font-size: .7rem;
-  }  
-  .tech{
-    font-size: 1.6rem;
-  }
+    font-size: .8rem;
+  } 
   .slideY a{ 
-  margin-top: .5rem;
-  padding: 0 2rem;   
-  font-size: .7rem;  
-  }
-  
-  .horas::after{
-    font-size: .5rem;
-    top: -3.3rem;
-  }
-  .horas::before{
-    font-size: .7rem;
-    bottom:  4px;
-    right: 0;
-  }
-  .horas{
-    font-size: 3rem;
-  }  
+  margin-top: .5rem;  
+  }   
   .certifiedLogo,.certifiedDocumentContentTop,.certifiedDocumentContentDetails{
     border-radius: 6px;
-  }      
-    .voltarBtn,.certifiedLogo::before{
-      scale: .8;
-    }
-    .contentBx h2{      
-      font-size: 1rem;  
-    }    
-    .contentBx{
-      left: 40%;
-    }
-    .imgbx{
-      left:calc(50% - 35px);
-    }
-
-    
+  }   
+  .certifiedDocumentContentTop{
+    padding: .3rem;
+  }   
+  .voltarBtn,.certifiedLogo::before{
+    scale: .8;
+  }
+  .contentBx h2{      
+    font-size: 1rem;  
+  }    
+  .contentBx{
+    left: 40%;
+  }    
 }
 @media(max-width:600px){
   .abilityContent_Icons{
@@ -416,60 +410,53 @@ display: inline-block;
     gap: 5rem 1rem;
   }
   .abilitySectionBx{
-    padding: .5rem;
+    padding: 2.5rem .8rem;
   }
   .slideY li span::before{
     height: 6px;
     width: 4px;    
-  }
-  .slideY li{
-    font-size: .5rem;
+  }       
+  .certifiedDocument:hover .tech{   
+    top: .5rem;
+    font-size: 1.3rem;
   }  
-  .tech{
+  .slideY li {
+    font-size: .7rem;
+  }  
+  .slideY a{
     font-size: 1rem;
+  } 
+  .horas::before {    
+    font-size: .8rem;    
   }
-  .slideY a{ 
-  margin-top: .2rem;
-  padding: 0 1.5rem;   
-  font-size: .5rem;  
+  .horas::after {    
+    font-size: .5rem;   
   }
-  
-  .horas::after{
-    font-size: .3rem;
-    top: -40px;   
+  .horas {    
+    font-size: 4rem;    
+  }
+  .imgbx{
+    left: calc(50% - 55px);
   }
   .logos{    
     max-width:80px;
     width: 100%;
-  }
-  .horas::before{
-    font-size: .5rem;
-    bottom:  2px;
-  }
-  .horas{
-    font-size: 2.5rem;
   }  
   .abilityContent_Certified{
     gap: .3rem;
-    padding: 0 
+    padding: 1rem 
   }  
   .abilityContent_Icons{
    gap: 1rem;
    padding: 0;
    height: 100%;
    align-content: space-around;
-  }
-  .certifiedLogo::before{
-    scale: .6;
-    top:1px;
-  }
+  }  
   .certifiedLogo{
     border: #A97E2F solid 2px;
   }
-  .voltarBtn{
-    scale: .6;
-    top:6px;
-    left: -30px;    
+  .voltarBtn{   
+    left: -32px;   
   }
   .contentBx h2{      
     font-size: .7rem;
@@ -477,80 +464,78 @@ display: inline-block;
   }    
   .contentBx{
     margin-left: 20px;
-    left:40%;  }
-  .imgbx{
-    left:calc(50% - 20px);  
-    padding: .3rem 0 ; 
-  }
-  .certifiedDocumentContentTop{
-    padding: 0;
-    gap:0px;
-  }
+    left:40%; 
+   }  
   .certifiedDocumentContentDetails,.certifiedDocumentContentTop,.certifiedLogo{
     border-radius: 4px;
   }
 } 
-@media(max-width:460px){
-
+@media(max-width:500px){
+  .horas::before {    
+    font-size: 1rem;    
+  }
+  .horas::after {    
+    font-size: .6rem;   
+  }
+  .horas {    
+    font-size: 5rem;   
+  }  
   .certifiedDocument:hover .slideY{
-    top: 24%;
+    top: calc(50% - 50px);
   }
   .slideY li{
-    font-size: .5rem;
+    font-size: .9rem;
   }  
-  .tech{
-    font-size: 1.3rem;
+  .certifiedDocument:hover .tech{
+    font-size:2rem;
   }
   .slideY a{ 
-  margin-top: .4rem;  
-  font-size: .5rem; 
-  border: solid 1px #A97E2F; 
+  margin-top: .2rem;  
+  font-size: 1rem; 
   }
-  
-  .horas::after{
-    font-size: .4rem;
-    top: -43px;
+  .certifiedLogo::before{   
+    top:4px;
   }
-  .horas::before{
-    font-size: .6rem;
-    bottom:  0px;
-  }
-  .horas{
-    font-size: 2.5rem;
+  .voltarBtn{
+    scale: 1;
+    top:10px;
+    left: -30px;    
   }  
   .abilityContent_Certified{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     justify-content: center;
     align-items: start;
-    padding: 0; 
+    padding: .3rem .7rem; 
     max-width: 100%;   
     width: 100%;
   }
   .abilityContent_Icons{
     grid-template-columns: 1fr 1fr;
-    padding:.5rem 1.5rem ;
+    padding:.5rem;
     justify-items: space-between;
   }
   .abilitySectionBx{
-    padding: 1rem 2rem;
-  }  
-  .imgbx{
-    left:calc(50% - 20px);  
-    padding: 2px ; 
-  }  
-  
+    padding: 0;
+    margin:  1.5rem 0;
+  }
+  .abilitySection{
+    padding: 1rem ;
+  }   
   .contentBx h2{      
     font-size: .6rem;
     line-height: 1;  
   }    
   .contentBx{
     margin-left: 20px;
-    left:40%;  }
+    left:40%;
+  }
   .imgbx{
-    left:calc(50% - 15px);  
-    padding: 2px ; 
+    left:calc(50% - 50px); 
   }  
+  .certifiedDocumentContentTop{
+    padding: .2rem;
+  }
 }
 @media(max-width:300px){
   .abilityContent_Icons{
@@ -558,7 +543,17 @@ display: inline-block;
     justify-items: space-between;
   }
   .abilitySectionBx{
-    padding: 1rem;
+    padding: .3rem;
+  }
+  .slideY li{
+    font-size: .8rem;
+  }  
+  .certifiedDocument:hover .tech{
+    font-size:1.3rem;
+  }
+  .slideY a{ 
+  margin-top: .5rem;  
+  font-size: .8rem; 
   }
 }
 

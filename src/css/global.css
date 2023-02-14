@@ -8,11 +8,15 @@
 }
 /* ---------------------- */
 .status{
+  /* display: ; */
   padding: 1rem;
-  background-color: #aba8a2;
+  background-color: rgba(0, 0, 0, 0.2);
   border: #a97e2f solid 2px;
   position: fixed;
   z-index: 10;
+  right: 0;
+  top: 10%;
+  color: #544523;
 }
 .statusW{
   top:0;

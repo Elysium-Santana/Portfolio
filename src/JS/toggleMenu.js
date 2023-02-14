@@ -5,10 +5,12 @@ export default function toggleMenu() {
   const skew = document.querySelector('.skew');
   const topoBtn = document.querySelector('#topo');
   // =======================================
-  const statusW = document.querySelector('.statusW');
-  const statusH = document.querySelector('.statusH');
+
   function updateScreenSize() {
-    statusW.innerHTML = ` width ${window.innerWidth}`;
+    const statusW = document.querySelector('.statusW');
+    const statusH = document.querySelector('.statusH');
+
+    statusW.innerHTML = ` height ${window.innerWidth}`;
     statusH.innerHTML = ` height ${window.innerHeight}`;
   }
 
