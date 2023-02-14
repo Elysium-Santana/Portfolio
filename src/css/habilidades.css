@@ -1,4 +1,6 @@
-
+.certifiedLogoImgBx svg{
+  fill: var(--principal_1);
+}
 .abilitySection>h1{
   color: var(--preto);
 }
@@ -18,7 +20,6 @@
   padding: 1rem;
   align-items: center;
   justify-items: center;
-  border: 2px solid black;
   margin: 4rem 0;
   overflow: hidden;
 }
@@ -32,7 +33,6 @@
   justify-items: center;
   align-items: center;
   justify-self: center;
-  border: 2px solid red;
 }
 .abilityContent_Certified{
   display: grid;
@@ -43,10 +43,7 @@
   width: 100%;  
   max-height: 100%;  
   align-items: center;
-  justify-content: center;
-  border: 2px solid brown;
-  
-  
+  justify-content: center; 
 }
 .logos{
 object-fit: contain;
@@ -532,7 +529,8 @@ display: inline-block;
   }
   .abilityContent_Icons{
     grid-template-columns: 1fr 1fr;
-    padding:.5rem 2.5rem ;
+    padding:.5rem 1.5rem ;
+    justify-items: space-between;
   }
   .abilitySectionBx{
     padding: 1rem 2rem;
@@ -552,9 +550,16 @@ display: inline-block;
   .imgbx{
     left:calc(50% - 15px);  
     padding: 2px ; 
-  }
-  
+  }  
 }
-  
+@media(max-width:300px){
+  .abilityContent_Icons{
+    padding:.5rem .5rem ;
+    justify-items: space-between;
+  }
+  .abilitySectionBx{
+    padding: 1rem;
+  }
+}
 
 
