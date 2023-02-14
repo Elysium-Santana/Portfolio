@@ -514,6 +514,7 @@ display: inline-block;
     grid-template-columns: 1fr 1fr;
     padding:.5rem;
     justify-items: space-between;
+    gap: 1rem;
   }
   .abilitySectionBx{
     padding: 0;
