@@ -82,15 +82,8 @@ color:#A97E2F;
   
   .cardContent{
     padding: .5rem 1rem;  
-  }
-  .cardContent .btnConteiner{    
-    grid-template-columns: 80px 80px;    
-    width:160px;
-    height: 1rem;
-  }
-  .cardContent  .btnConteiner a{
-    font-size: .6rem;
-  }  
+  } 
+  
 }
 @media(max-width:350px){
   .card{
@@ -109,11 +102,11 @@ color:#A97E2F;
     padding: .3rem .8rem; 
   }
   .cardContent .btnConteiner{    
-    grid-template-columns: 70px 70px;    
-    width:140px;
-    height: .9rem;
+    grid-template-columns: 80px 80px;    
+    width:160px;
+    height: 1.3rem;
   }
   .cardContent  .btnConteiner a{
-    font-size: .6rem;
+    font-size: .75rem;
   }  
 }
