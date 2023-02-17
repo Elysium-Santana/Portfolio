@@ -5,6 +5,8 @@ export default function selectAbility() {
   const certifiedDocument = document.querySelector('.certifiedDocument');
   let certifiedLogoImgBx = document.querySelector('.certifiedLogoImgBx');
 
+  fetchAbility('./src/img/javascript.svg');
+
   const certifieds = [
     {
       tecnologia: 'HTML',
@@ -108,40 +110,40 @@ export default function selectAbility() {
     if (!target.classList.contains('voltarBtn')) {
       const attributeSrc = target.getAttribute('src');
       target.classList.add('target');
-
-      fetch(`${attributeSrc}`)
-        .then((response) => response.text())
-        .then((svgString) => {
-          certifiedLogoImgBx.innerHTML = svgString;
-          const certifiedLogoImg = certifiedLogoImgBx.querySelector('svg');
-          certifiedLogoImg.classList.add('certifiedLogoImg');
-          console.log(attributeSrc);
-          const tech = attributeSrc
-            .replace('./src/img/', '')
-            .replace('.svg', '')
-            .toUpperCase();
-          let index = certifieds.findIndex(
-            (certified) => certified.tecnologia === tech,
-          );
-
-          document.querySelector('.tech').innerHTML =
-            certifieds[index].tecnologia;
-          document.querySelector(
-            '.slideY ul li:nth-of-type(1) span',
-          ).innerHTML = certifieds[index].inicio;
-          document.querySelector(
-            '.slideY ul li:nth-of-type(2) span',
-          ).innerHTML = certifieds[index].conclusao;
-          document.querySelector('.horas').innerHTML =
-            certifieds[index].carga_horaria;
-          document.querySelector('.escola').innerHTML =
-            certifieds[index].escola;
-          document.querySelector('.slideY a').href = certifieds[index].link;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      fetchAbility(attributeSrc);
     }
+  }
+
+  function fetchAbility(attributeSrc) {
+    fetch(`${attributeSrc}`)
+      .then((response) => response.text())
+      .then((svgString) => {
+        certifiedLogoImgBx.innerHTML = svgString;
+        const certifiedLogoImg = certifiedLogoImgBx.querySelector('svg');
+        certifiedLogoImg.classList.add('certifiedLogoImg');
+        console.log(attributeSrc);
+        const tech = attributeSrc
+          .replace('./src/img/', '')
+          .replace('.svg', '')
+          .toUpperCase();
+        let index = certifieds.findIndex(
+          (certified) => certified.tecnologia === tech,
+        );
+
+        document.querySelector('.tech').innerHTML =
+          certifieds[index].tecnologia;
+        document.querySelector('.slideY ul li:nth-of-type(1) span').innerHTML =
+          certifieds[index].inicio;
+        document.querySelector('.slideY ul li:nth-of-type(2) span').innerHTML =
+          certifieds[index].conclusao;
+        document.querySelector('.horas').innerHTML =
+          certifieds[index].carga_horaria;
+        document.querySelector('.escola').innerHTML = certifieds[index].escola;
+        document.querySelector('.slideY a').href = certifieds[index].link;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   button.addEventListener('click', animateOut);

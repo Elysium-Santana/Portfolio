@@ -79,21 +79,32 @@ visibility: hidden;
   width: 100%;
   height:100%;
 }
-.certifiedDocument,
-.certifiedLogo {
-  opacity: 0;
-  visibility: hidden;
-  transition: .6s;
+.certifiedDocument{  
+  display: flex;
+  transform: translateX(200px);
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  gap: .5rem;
+  transition: .4s;
 }
 .certifiedLogo{  
-  width:100%;
+  transform: translateX(-200px);
   display: flex;
+  width:100%;
+  height: 100%;
   justify-content: center;
   align-content: center;
   position: relative;
   border: #A97E2F solid 4px;
   border-radius: 8px;
-  height: 100%;
+}
+.certifiedDocument,
+.certifiedLogo {
+  visibility: hidden;
+  opacity: 0;
+  transition: .6s;
 }
 .certifiedDocument:hover .certifiedDocumentContentTop{
   height: 30%;
@@ -112,21 +123,13 @@ visibility: hidden;
 }
 
 .certifiedDocument:hover .contentBx{
- left:0;
+ left:-50px;
  opacity: 1;
 }
 .certifiedDocument:hover .imgbx{
  left:-20px;
 }
-.certifiedDocument{  
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  gap: .5rem;
-  transition: .4s;
-}
+
 .imgbx{
   position: relative;
   width: 100%;
@@ -150,7 +153,7 @@ visibility: hidden;
   transition: .4s;
   align-items: center;
   overflow: hidden;
-  gap:2rem;
+  gap:1rem;
 }
 .contentBx h2{  
   color: #fff;
@@ -161,18 +164,9 @@ visibility: hidden;
 }
 .contentBx{
   position: relative;
-  display: none;
-  left: 50%;
+  left: 30%;
   opacity: 0;
   transition: .4s;
-}
-
-.certifiedDocument {
-  transform: translateX(200px);
-}
-
-.certifiedLogo {
-  transform: translateX(-200px);
 }
 .certifiedDocumentContentDetails {
   position: relative;
@@ -193,7 +187,7 @@ visibility: hidden;
   position: absolute;
   display: inline-block;
   font-size: 1.2rem;
-  bottom:-8px;
+  bottom:-10px;
   right: 0;
 }
 .horas::after {
@@ -202,7 +196,7 @@ visibility: hidden;
   color: #aba8a2;
   display: inline-block;
   font-size: .8rem;
-  top:-8px;  
+  top:-11px;  
   right: 0;
 }
 .horas {
@@ -229,9 +223,10 @@ visibility: hidden;
   position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items:center;
   width: 100%;
+  height: max-content;
   justify-items: right;
+  align-content: space-between;
   top: 150px;
   opacity: 0;
   transition: .4s;
@@ -249,6 +244,8 @@ display: inline-block;
 .slideY li{  
   position: relative;
   color: #aba8a2;
+  line-height: 1;
+  margin-bottom: .6rem;
 }
 .slideY li span{
   display: flex;
@@ -261,7 +258,7 @@ display: inline-block;
   justify-self: center;   
   display:inline-block;
   cursor: pointer;
-  padding: 0 2rem;
+  padding: .3rem 2rem;
   margin-top: .7rem;
   border: 2px solid #a97e2f;
   border-radius: 25px 25px;
@@ -296,6 +293,25 @@ display: inline-block;
   left: -30px;
   top:23px;
 }
+.certifiedDocument:hover .tech::after {
+  opacity: 0;
+}
+
+.tech::after {
+  transition: .4s;
+  content: '';
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  width: 40px;
+  height: 40px;
+  top: 27px;
+  left: 24px;
+  scale: 0.5;
+  background: url("../img/arrow.svg") center center no-repeat;
+  animation: moveArrowUp .8s ease-in-out infinite;
+
+}
 @keyframes moveArrow {
   0% {
     transform: translateX(0) rotate(0);
@@ -324,10 +340,11 @@ display: inline-block;
 
  @media(max-width:930px){
   .horas::before {    
-    font-size: 1rem;    
+    font-size: 1rem; 
+    bottom: 6px;   
   }
   .horas::after {    
-    font-size: .6rem;   
+    font-size: .7rem;
   }
   .horas {    
     font-size: 5rem;   
@@ -381,12 +398,9 @@ display: inline-block;
   }   
   .certifiedDocument:hover .tech{   
     top:1rem;
-  }   
-  .slideY li{
-    font-size: .8rem;
-  } 
+  }     
   .slideY a{ 
-  margin-top: .5rem;  
+  margin-top: 0;  
   }   
   .certifiedLogo,.certifiedDocumentContentTop,.certifiedDocumentContentDetails{
     border-radius: 6px;
@@ -396,99 +410,63 @@ display: inline-block;
   }   
   .voltarBtn,.certifiedLogo::before{
     scale: .8;
-  }
-  .contentBx h2{      
-    font-size: 1rem;  
-  }    
+  }   
   .contentBx{
     left: 40%;
   }    
 }
-@media(max-width:600px){
-  .abilityContent_Icons{
-    padding: .5rem ;
-    gap: 5rem 1rem;
-  }
-  .abilitySectionBx{
-    padding: 2.5rem .8rem;
-  }
-  .slideY li span::before{
-    height: 6px;
-    width: 4px;    
-  }       
-  .certifiedDocument:hover .tech{   
-    top: .5rem;
-    font-size: 1.3rem;
-  }  
-  .slideY li {
-    font-size: .7rem;
-  }  
-  .slideY a{
-    font-size: 1rem;
-  } 
+
+@media(max-width:650px){
   .horas::before {    
-    font-size: .8rem;    
-  }
-  .horas::after {    
-    font-size: .5rem;   
-  }
-  .horas {    
-    font-size: 4rem;    
-  }
-  .imgbx{
-    left: calc(50% - 55px);
-  }
-  .logos{    
-    max-width:80px;
-    width: 100%;
-  }  
-  .abilityContent_Certified{
-    gap: .3rem;
-    padding: 1rem 
-  }  
-  .abilityContent_Icons{
-   gap: 1rem;
-   padding: 0;
-   height: 100%;
-   align-content: space-around;
-  }  
-  .certifiedLogo{
-    border: #A97E2F solid 2px;
-  }
-  .voltarBtn{   
-    left: -32px;   
-  }
-  .contentBx h2{      
-    font-size: .7rem;
-    line-height: 1;  
-  }    
-  .contentBx{
-    margin-left: 20px;
-    left:40%; 
-   }  
-  .certifiedDocumentContentDetails,.certifiedDocumentContentTop,.certifiedLogo{
-    border-radius: 4px;
-  }
-} 
-@media(max-width:500px){
-  .horas::before {    
-    font-size: 1rem;    
+    font-size: 1rem; 
+    bottom: 2px;   
   }
   .horas::after {    
     font-size: .6rem;   
   }
   .horas {    
     font-size: 5rem;   
-  }  
-  .certifiedDocument:hover .slideY{
-    top: calc(50% - 50px);
+  
   }
+  .certifiedDocument:hover .contentBx{
+    left: -50px;
+  }
+  .certifiedDocument:hover .slideY{
+    margin-top:unset;
+  }    
   .slideY li{
     font-size: .9rem;
   }  
-  .certifiedDocument:hover .tech{
-    font-size:2rem;
+  .certifiedDocumentContentTop{    
+    height: 30%;
   }
+  .contentBx{
+    left: -50px;     
+    opacity: 1;
+  }
+  .tech{
+    color: #f7f7f8;
+    top: 0;
+    scale: 0.8;
+    position: unset;
+    margin-bottom: 1rem;
+  }
+  .slideY{
+    top: calc(50% - 50px);
+    opacity: 1;
+    position:unset;
+    
+  }
+  .certifiedDocumentContentDetails{
+    justify-content: center;
+    height: 70%;
+  }  
+  
+  .imgbx{     
+   opacity: 1;
+   left:0;
+   position: initial;
+  }  
   .slideY a{ 
   margin-top: .2rem;  
   font-size: 1rem; 
@@ -522,40 +500,13 @@ display: inline-block;
   }
   .abilitySection{
     padding: 1rem ;
-  }   
-  .contentBx h2{      
-    font-size: .6rem;
-    line-height: 1;  
-  }    
-  .contentBx{
-    margin-left: 20px;
-    left:40%;
-  }
-  .imgbx{
-    left:calc(50% - 50px); 
   }  
-  .certifiedDocumentContentTop{
-    padding: .2rem;
-  }
 }
-@media(max-width:300px){
-  .abilityContent_Icons{
-    padding:.5rem .5rem ;
-    justify-items: space-between;
-  }
-  .abilitySectionBx{
-    padding: .3rem;
-  }
-  .slideY li{
-    font-size: .8rem;
-  }  
-  .certifiedDocument:hover .tech{
-    font-size:1.3rem;
-  }
-  .slideY a{ 
-  margin-top: .5rem;  
-  font-size: .8rem; 
-  }
+@media(max-width:370px){
+ .contentBx{
+  font-size: .5rem;
+  left: -10px;
+ }
 }
 
 
