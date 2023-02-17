@@ -290,7 +290,7 @@ display: inline-block;
   height: 40px;
   background: url("../img/arrow.svg") center center no-repeat;
   animation: moveArrow.6s ease-in-out infinite;
-  left: -30px;
+  left:-30px;
   top:23px;
 }
 .certifiedDocument:hover .tech::after {
@@ -302,11 +302,10 @@ display: inline-block;
   content: '';
   position: absolute;
   cursor: pointer;
-  color: white;
   width: 40px;
-  height: 40px;
+  height: 40px;  
   top: 27px;
-  left: 24px;
+  left:calc(50% - 17px) ;
   scale: 0.5;
   background: url("../img/arrow.svg") center center no-repeat;
   animation: moveArrowUp .8s ease-in-out infinite;
@@ -339,6 +338,7 @@ display: inline-block;
 
 
  @media(max-width:930px){
+  
   .horas::before {    
     font-size: 1rem; 
     bottom: 6px;   
@@ -417,6 +417,9 @@ display: inline-block;
 }
 
 @media(max-width:650px){
+  .tech::after{
+    display: none;
+  }
   .horas::before {    
     font-size: 1rem; 
     bottom: 2px;   
