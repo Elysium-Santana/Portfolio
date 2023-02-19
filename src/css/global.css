@@ -6,9 +6,11 @@
   list-style: none;
   text-decoration: none;
 }
-/* ---------------------- */
+a, button{
+  -webkit-tap-highlight-color: transparent;
+}
 .status{
-  /* display: ; */
+  display:none;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.2);
   border: #a97e2f solid 2px;
@@ -26,12 +28,8 @@
   top:20px;
   right: 0;
 }
-/* ------------------------------ */
 body {
-  /* display: flex; */
-  background-color: black;
-  /* justify-content: center; */
-  /* align-items: center; */
+  background-color: black; 
 }
 :root {
   --principal_1: #a97e2f;
@@ -92,6 +90,9 @@ img {
 .btnConteiner li:last-child{
   border-left: #a97e2f 3px solid;
 }
+.projectLink{
+  cursor: pointer;
+}
 .projectLinkBx{
   display: flex;  
   transition: .4s;
@@ -99,10 +100,9 @@ img {
   margin: 0;
   justify-content: center;
   text-align: center;
-  align-items: center;  
+  align-items: center; 
 }
 .btnConteiner{
-  cursor: pointer;
   transition: .4s;
   overflow: hidden;
   display: grid;
@@ -125,8 +125,7 @@ img {
     display: inline-block;
     margin-bottom: 0.3rem;
     z-index: 1;
-  }  
-  
+  }    
 }
 @media(max-width:450px){
   .title {
@@ -135,14 +134,15 @@ img {
   }  
   .section {
     padding: 1rem;
-  }
+  }  
+}
+@media(max-width:370px){
   .btnConteiner{    
-    grid-template-columns: 110px 110px;    
-    width:210px;
-    padding: 0;    
-    height: 1.7rem;  
+    grid-template-columns: 120px 120px;    
+    width:240px;    
   }
   .btnConteiner a{
     font-size: .9rem;
   }
+ 
 }

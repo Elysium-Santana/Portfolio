@@ -253,6 +253,10 @@ display: inline-block;
   align-items: center;
   color: #f7f7f8;
 }
+.slideY a:hover{
+  background-color: #A97E2F;
+  color:var(--principal_2);
+}
 .slideY a{
   grid-column: 1/-1;
   justify-self: center;   
@@ -263,7 +267,8 @@ display: inline-block;
   border: 2px solid #a97e2f;
   border-radius: 25px 25px;
   color: #a97e2f;
-  text-align: center;  
+  text-align: center; 
+  transition: .2s; 
 }
 .tech{
   transition: .4s;
@@ -304,8 +309,8 @@ display: inline-block;
   cursor: pointer;
   width: 40px;
   height: 40px;  
-  top: 27px;
-  left:calc(50% - 17px) ;
+  top: 24px;
+  left:calc(50% - 18px) ;
   scale: 0.5;
   background: url("../img/arrow.svg") center center no-repeat;
   animation: moveArrowUp .8s ease-in-out infinite;
@@ -463,8 +468,7 @@ display: inline-block;
   .certifiedDocumentContentDetails{
     justify-content: center;
     height: 70%;
-  }  
-  
+  }    
   .imgbx{     
    opacity: 1;
    left:0;
@@ -488,14 +492,22 @@ display: inline-block;
     justify-content: center;
     align-items: start;
     padding: .3rem .7rem; 
-    max-width: 100%;   
-    width: 100%;
+    /* max-width: 100%;    */
+    /* width: 100%; */
   }
-  .abilityContent_Icons{
+  .abilityContent_Icons{    
     grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-content: space-around;
     padding:.5rem;
-    justify-items: space-between;
-    gap: 1rem;
+    gap:2rem;
+  }
+  .logos{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #aba8a2;
+    border-radius: 4px;
+    padding: 2rem   ;
   }
   .abilitySectionBx{
     padding: 0;
@@ -509,6 +521,9 @@ display: inline-block;
  .contentBx{
   font-size: .5rem;
   left: -10px;
+ }
+ .abilityContent_Icons{ 
+  gap: 1rem;
  }
 }
 

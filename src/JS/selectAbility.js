@@ -29,18 +29,19 @@ export default function selectAbility() {
     {
       tecnologia: 'GITHUB',
       titulo: 'Git and GitHub for Web Developers',
-      escola: 'Não Possui',
+      escola: 'Dev Quest',
       carga_horaria: '00 ',
-      inicio: '-',
+      inicio: 'em andamento...',
       conclusao: '-',
     },
     {
       tecnologia: 'GIT',
       titulo: 'Advanced Git Techniques',
-      escola: 'Não Possui',
+      escola: 'Dev Quest',
       carga_horaria: '00',
-      inicio: '-',
+      inicio: 'em andamento...',
       conclusao: '-',
+      link: '',
     },
     {
       tecnologia: 'UI',
