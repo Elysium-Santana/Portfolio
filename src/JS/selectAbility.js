@@ -32,7 +32,7 @@ export default function selectAbility() {
       escola: 'Dev Quest',
       carga_horaria: '00 ',
       inicio: 'em andamento...',
-      conclusao: '-',
+      conclusao: 'Breve',
     },
     {
       tecnologia: 'GIT',
@@ -40,7 +40,7 @@ export default function selectAbility() {
       escola: 'Dev Quest',
       carga_horaria: '00',
       inicio: 'em andamento...',
-      conclusao: '-',
+      conclusao: 'Breve',
       link: '',
     },
     {
@@ -65,9 +65,10 @@ export default function selectAbility() {
       tecnologia: 'FIGMA',
       titulo: 'Figma for Web Design',
       escola: 'ORIGAMID',
-      carga_horaria: '20',
-      inicio: '06/01/20',
-      conclusao: '06/10/20',
+      carga_horaria: '34',
+      inicio: '23/05/22',
+      conclusao: '10/06/22',
+      link: 'https://www.origamid.com/certificate/aaa4acba',
     },
     {
       tecnologia: 'REACT',

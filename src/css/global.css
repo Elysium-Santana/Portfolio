@@ -92,6 +92,8 @@ img {
 }
 .projectLink{
   cursor: pointer;
+  color: #a97e2f;
+
 }
 .projectLinkBx{
   display: flex;  
@@ -113,7 +115,7 @@ img {
   padding: .2rem 1rem;
   border: 2px solid #a97e2f;
   border-radius: 25px 25px;
-  color: #a97e2f;
+  
   height: 2rem;  
 }
 /* ------------------------------------------------------ */

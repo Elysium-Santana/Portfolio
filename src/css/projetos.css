@@ -56,6 +56,9 @@ color:#A97E2F;
   .cardContent{
     padding: .5rem 1rem; 
   }
+  .projetos>h1 {
+    margin-left: 2rem;
+  }
 }
 @media(max-width:540px){
   .card{

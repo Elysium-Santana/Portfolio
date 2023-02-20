@@ -2,7 +2,7 @@ import animateItems from './simple-anime.js';
 export default function toggleMenu() {
   const hamburgerBx = document.querySelector('.hamburgerBx');
   const navMenu = document.querySelector('.navMenu');
-  const skew = document.querySelector('.skew');
+  const skew = document.querySelector('.skewDec');
   const topoBtn = document.querySelector('#topo');
   // =======================================
 

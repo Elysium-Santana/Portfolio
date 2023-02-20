@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,800&family=Spectral:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="./src/css/style.css">
   <title>Document</title>
@@ -18,8 +19,8 @@
     <div class="status">
       <h1 class="statusW"></h1>
       <h1 class="statusH"></h1>
-      <a id="topo" href="#header"></a>
     </div>
+    <a id="topo" href="#header"></a>
 
     <header id="header" class="header ">
       <a href="#" class="logo"><img src="./src/img/Logo.svg" alt=""></a>
@@ -28,7 +29,7 @@
       </button>
       <nav class="navMenu">
         <ul>
-          <li><a href="#sobre" class="btn principal_color_component">Sobre</a></li>
+          <li><a href="#sobre">Sobre</a></li>
           <li style="--i:1"><a href="#habilidades">Habilidades</a></li>
           <li style="--i:2"><a href="#projetos">Projetos</a></li>
           <li style="--i:3"><a href="#contato">Contato</a></li>
@@ -40,10 +41,10 @@
 
       <div class="videoLoopBx">
         <video class="videoLoop" muted loop autoplay>
-          <source src="./src/img/Motion Background Plexus Moving Animated Lines HD Backdrop.mp4">
+          <source src="./src/img/Background Lines.mp4">
         </video>
       </div>
-      <div class="skew "></div>
+      <div class="skewDec"></div>
 
       <div class="bannerContent">
         <h1 class="fadeInLeft title" data-anime="300">OLÁ, <br> EU SOU O </h1>
@@ -54,17 +55,21 @@
 
         <ul class="btnConteiner fadeInLeft" data-anime="800">
           <li class="projectLinkBx"><a class="projectLink">Baixar Cv</a></li>
-          <li class="projectLinkBx"><a class="projectLink">Contato</a></li>
+          <li class="projectLinkBx"><a class="projectLink" href="#contato">Contato</a></li>
         </ul>
 
 
     </section>
-    <section id="sobre" class="sobreMim section">
+    <section id="sobre" class="sobreMim">
       <h1 class="title">SOBRE MIM</h1>
       <div class="sobreMimContent">
         <p>
 
-          Oi, meu nome é Elisio e sou apaixonado por desenho, tecnologia e tudo o que ela pode proporcionar. Adoro acompanhar as novidades do universo geek, como jogos e alguns animes. Desde pequeno, sempre fui curioso e gostava de me aprofundar em assuntos como tecnológia, astronomia e tinha mania desmontar as coisas pra concertar, mas nem sempre com sucesso pois na hora de montar sobravam peças 😀. Há cerca de um ano, comecei a estudar para me tornar um profissional de Front end. Desde então, tenho me dedicado a aprender e aprimorar minhas habilidades desenvolvendo alguns projetos. Além disso, estou sempre buscando novas oportunidades para me atualizar nas tecnologias mais recentes e continuar aprendendo. Meu sonho é um dia, como um hobby, poder programar um jogo e ver as pessoas se divertindo com ele. Até lá, estou focado em me tornar um profissional de Front end cada vez mais qualificado e buscando sempre novas oportunidades de aprendizado. Fora do mundo da tecnologia, gosto séries de TV, filmes e quadrinhos e passo meu tempo livre acompanhando tudo o que acontece no universo nerd. Se você também é apaixonado por tecnologia e games, ficaria feliz em poder conversar mais sobre isso um dia. Até mais!</p>
+          Olá! Meu nome é Elisio e estou em transição de carreira para me tornar um desenvolvedor front-end. Atualmente, trabalho como altomomo na área de design, utilizando Corel Draw para criar estampas de roupas e projetos para cortes em máquinas CNC.
+          Embora eu ame o mundo do design, sempre tive uma paixão por programação e tecnologia. Decidi que era hora de perseguir essa paixão e me dedicar a aprender mais sobre desenvolvimento web e design de interface de usuário.
+          Estou atualmente estudando e aprendendo tudo o que posso sobre HTML, CSS, JavaScript, React e outras tecnologias relacionadas. Além disso, estou sempre buscando oportunidades de trabalho que me permitam crescer e desenvolver minhas habilidades como desenvolvedor front-end.
+          Acredito que a combinação de minhas habilidades permitão abordar meus projetos de uma maneira diferenciada. Estou animado com as possibilidades que essa transição de carreira pode trazer e estou ansioso para ver onde ela me levará.
+          Obrigado por visitar o meu site portfolio e espero que você goste do que vê!</p>
 
       </div>
     </section>
@@ -225,7 +230,31 @@
       </div>
 
     </section>
+    <section id="contato" class="contactSection">
+      <h1 class="title" style="color:#eee">REDES.</h1>
+      <ul class="contactSectionContent">
+        <li data-text="Linkedin" data-color="blue"><a class="linkedin" href="https://www.linkedin.com/in/elisio-santana-69282997" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+
+        <li data-text="Instagram" data-color="#FA7E1E"><a class="instagram" href="https://www.instagram.com/elisiocorreasantana/
+" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+
+        <li data-text="Github" data-color="#051B34"> <a class="github" href="https://github.com/Elysium-Santana" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+
+        <li data-text="Whatsapp" data-color="#1AD03F"><a class="whatsapp" href="https://api.whatsapp.com/send?phone=5521976563553&?text=Ol%C3%A1%2C%20eu%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20mais%20sobre%20seus%20trabalhos.%20Podemos%20marcar%20uma%20reuni%C3%A3o%20para%20discutir%20projetos%20futuros%3F
+          " target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+      </ul>
+    </section>
   </section>
+  <!-- <script src="./src/JS/vanillaTilt.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll('.contactSectionContent li a'), {
+      max: 40,
+      speed: 400,
+      glare: true,
+      "max-glare": 1,
+    });
+  </script> -->
+
   <script type="module" src="./script.js"></script>
 
 </body>

@@ -2,11 +2,12 @@
   fill: var(--principal_1);
 }
 .abilitySection>h1{
-  color: var(--preto);
+  color: #444;
 }
 .abilitySection{
   background-color: #f7f7f8;
   padding: 2rem;
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   justify-self: center;
@@ -22,7 +23,6 @@
   align-items: center;
   align-self: center;
   justify-items: center;
-  /* margin: 4rem 0; */
 }
 .abilityContent_Icons{
   display: grid;  
@@ -47,6 +47,9 @@
   align-items: center;
   justify-content: center; 
 }
+.logos:hover{
+  padding: .7rem;
+  box-shadow: 4px 4px 8px  rgba(0, 0, 0, 0.15);}
 .logos{
 object-fit: contain;
 max-width:120px;
@@ -57,6 +60,7 @@ transform: scale(0.3);
 transition: 0.4s;
 opacity: 0;
 visibility: hidden;
+border-radius: 4px;
 }
 .logos.active {
   transform: scale(1);
@@ -386,6 +390,7 @@ display: inline-block;
   }    
 }
 @media(max-width:800px){
+  
   .abilityContent_Icons{
     max-width: 100%;
     width: 100%;
@@ -394,8 +399,12 @@ display: inline-block;
     align-content: space-between;
     gap: 5rem 2rem;
   }
+  .abilitySectionBx{
+    padding-top: 3rem;
+  }
   .abilitySection{
-    padding:.5rem;
+    padding-top: 4rem;
+    
   }   
   .certifiedDocument:hover .slideY{
     top: calc(50% - 50px);
@@ -422,6 +431,9 @@ display: inline-block;
 }
 
 @media(max-width:650px){
+  .abilitySection>h1{
+    margin-left: 1rem;
+  } 
   .tech::after{
     display: none;
   }
@@ -491,9 +503,7 @@ display: inline-block;
     grid-template-rows: 1fr 1fr;
     justify-content: center;
     align-items: start;
-    padding: .3rem .7rem; 
-    /* max-width: 100%;    */
-    /* width: 100%; */
+    padding: .3rem .7rem;   
   }
   .abilityContent_Icons{    
     grid-template-columns: 1fr 1fr;
@@ -501,6 +511,10 @@ display: inline-block;
     align-content: space-around;
     padding:.5rem;
     gap:2rem;
+  }
+  .logos:hover{
+    padding: 2rem;
+    box-shadow: initial;
   }
   .logos{
     width: 100%;
@@ -514,7 +528,7 @@ display: inline-block;
     margin:  1.5rem 0;
   }
   .abilitySection{
-    padding: 1rem ;
+    padding: 4rem 1rem ;
   }  
 }
 @media(max-width:370px){

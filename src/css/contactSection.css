@@ -1,0 +1,82 @@
+
+.contactSection>h1{
+  margin-bottom: 1.5rem;
+}
+.contactSection{
+  padding: 3rem ;
+  height: auto;
+  background-color: var(--background_1);
+  border-top:  solid 4px var(--principal_1);
+  padding-bottom: 6rem;
+  transition: .5s;
+}
+.contactSectionContent{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;  
+  justify-content: center;
+  align-items: center;
+  gap:1rem;  
+  position: relative;
+
+}
+.contactSectionContent a {
+width:80px;
+height:80px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #000;
+box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4);
+border-radius: 10px;
+color:#444;
+font-size: 2rem;
+transform-style:preserve-3d ;
+perspective: 500px;
+transition:  .4s;
+}
+.js-tilt-glare{
+  border-radius: 10px;
+}
+.contactSectionContent a:hover.whatsapp{
+  background:#1AD03F;
+}
+.contactSectionContent a:hover.instagram{
+  background-image: radial-gradient(circle at left bottom,#FEDA75,#FA7E1E,#D62976,#962FBF,#4F5BD5);
+
+}
+.contactSectionContent a:hover.linkedin{
+  background: blue;
+}
+.contactSectionContent a:hover.github{
+  background: #051B34;
+}
+.contactSectionContent a:hover i{
+  transition: .4s;
+  pointer-events: none;
+}
+.contactSectionContent a:hover i{
+  color: #fff;
+  transform: scale(1.75) translateZ(30px);
+}
+.contactSectionContent li::before{
+  content: attr(data-text);
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  pointer-events: none;
+  font-weight: 700;
+  opacity: 0;
+  transition: .4s;
+}
+.contactSectionContent li:hover:before{
+  transform: translate(-50%, calc(-50% + 80px) );
+  opacity: .2;
+}
+@media(max-width:463px){
+  .contactSectionContent li:hover:before{
+    transform: translate(-50%, calc(-50% + 120px) );
+  }
+}

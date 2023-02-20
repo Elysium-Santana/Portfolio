@@ -75,7 +75,7 @@
   opacity: 1;  
   bottom:40%;
 }
-.skew{
+.skewDec{
   border-right: #a97e2f 5px solid;
   position: absolute;
   z-index: -1;
@@ -103,7 +103,7 @@
     visibility: visible;
     width: 100%;
   }
-  .skew{
+  .skewDec{
     border-right: var(--principal_2) 5px solid;
     position: absolute;
     z-index: -1;
@@ -114,7 +114,7 @@
     backdrop-filter: blur(10px);
     transform: skew(-20deg ) ;
     transition: .4s;  }
-   .skew.active{
+   .skewDec.active{
     width: 150%;
     z-index: 2;
   }
@@ -196,10 +196,10 @@
   }  
 }
 @media(max-width: 800px){
-  .skew.skew.active{
+  .skewDec.skewDec.active{
     width: 180%;
   }
-  .skew{
+  .skewDec{
     width: 80%;
     left: -150px;
   }
@@ -213,7 +213,7 @@
   
 }
 @media(max-width:380px){
-  .skew{
+  .skewDec{
     width: 100%;
   }
   
