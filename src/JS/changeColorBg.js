@@ -9,16 +9,15 @@ export function changeColorBg() {
   const mobileConfig = window.matchMedia('(max-width: 650px)');
 
   function changeBg(mobileConfig) {
-    if (!mobileConfig.matches) {
-      listContact.forEach((item) => {
-        item.addEventListener('mouseenter', handleMouseEnter);
-        item.addEventListener('mouseleave', handleMouseLeave);
-      });
-      //aqui eu quero que execute somente quando for maior que 650px
-    } else {
+    if (mobileConfig.matches) {
       listContact.forEach((item) => {
         item.removeEventListener('mouseenter', handleMouseEnter);
         item.removeEventListener('mouseleave', handleMouseLeave);
+      });
+    } else {
+      listContact.forEach((item) => {
+        item.addEventListener('mouseenter', handleMouseEnter);
+        item.addEventListener('mouseleave', handleMouseLeave);
       });
     }
   }
@@ -31,5 +30,5 @@ export function changeColorBg() {
     contactSection.style.backgroundColor = color;
   }
   mobileConfig.addEventListener('change', changeBg);
-  //o problema é que funciona uma vez so. quendo eu aumento a tela (mobileConfig.matches) continua como true
+  changeBg(mobileConfig);
 }
