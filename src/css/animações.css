@@ -16,10 +16,8 @@
   height: 5%;
   background-color: var(--principal_1);
   z-index: -1;
-  padding: .3rem;
-  
+  padding: .3rem;  
 }
-
  .fadeInDown {
   transform: translate3d(0, -80px, 0);
 }
@@ -32,14 +30,43 @@
  .fadeInLeft {
   transform: translate3d(-80px, 0, 0);
 }
-
-/* 7 Adicione o CSS Essencial abaixo */
  [data-anime] {
   opacity: 0;
   transition: transform 0.8s, opacity 0.8s;
 }
-.anime {
+[data-scroll="scroll"] {
+  opacity: 0;
+  transition: 0.5s;
+  transform: translate3d(-60px, 0, 0);
+}
+[data-scroll="zoom"] {
+  opacity: 0;
+  transition: 0.5s;
+  transform: translate3d(0, 0, 0);
+  scale: .6;
+}
+[data-scroll="toRight"] {
+  opacity: 0;
+  transition: 0.5s;
+  transform: translate3d(-60px, 0, 0);
+}
+[data-scroll="toLeft"] {
+  opacity: 0;
+  transition: 0.5s;
+  transform: translate3d(60px, 0, 0);
+}
+[data-scroll="toUp"] {
+  opacity: 0;
+  transition: 0.5s;
+  transform: translate3d(0, 60px, 0);
+}
+[data-scroll="toDown"] {
+  opacity: 0;
+  transition: 0.5s;
+  transform: translate3d(0, -60px, 0);
+}
+.anime, [data-scroll="zoom"].ativo, [data-scroll="toDown"].ativo, [data-scroll="toRight"].ativo, [data-scroll="toLeft"].ativo, [data-scroll="toUp"].ativo{
+  scale: 1;
   opacity: 1;
-  transform: translate3d(0, 0, 0)
-  
+  transform: translate3d(0, 0, 0);
 }

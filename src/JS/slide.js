@@ -18,7 +18,6 @@ export class Slide {
     this.dist.moviment = this.dist.startX - clientX;
     return this.dist.finalPosition - this.dist.moviment;
   }
-
   onStart(event) {
     let movetype;
     if (event.type === 'mousedown') {

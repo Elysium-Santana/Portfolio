@@ -1,8 +1,9 @@
 import { VanillaTilt } from './vanillaTilt.js';
 export function changeColorBg() {
   VanillaTilt.init(document.querySelectorAll('.contactSectionContent li a'), {
-    max: 25,
+    max: 35,
     speed: 400,
+    glare: true,
   });
   const listContact = document.querySelectorAll('.contactSectionContent li');
   const contactSection = document.querySelector('.contactSection');

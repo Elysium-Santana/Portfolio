@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="discription" content="TENHO EXPERIÊNCIA COM PROJETOS PESSOAIS UTILIZANDO HTML, CSS, JAVASCRIPT E REACT. ESTOU SEMPRE BUSCANDO NOVAS OPORTUNIDADES DE APRENDIZADO E QUERO ME TORNAR UM PROFISSIONAL CADA VEZ MAIS QUALIFICADO.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,800&family=Spectral:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./src/css/style.css">
-  <title>Document</title>
+  <title>Elisio | Site Portfolio</title>
 </head>
 
 <body>
@@ -41,7 +42,7 @@
 
       <div class="videoLoopBx">
         <video class="videoLoop" muted loop autoplay>
-          <source src="./src/img/Background Lines.mp4">
+          <source src="./src/img/video/Background Lines.mp4">
         </video>
       </div>
       <div class="skewDec"></div>
@@ -61,8 +62,8 @@
 
     </section>
     <section id="sobre" class="sobreMim">
-      <h1 class="title">SOBRE MIM</h1>
-      <div class="sobreMimContent">
+      <h1 data-scroll="toRight" class="title">SOBRE MIM</h1>
+      <div data-scroll="toLeft" class="sobreMimContent">
         <p>
 
           Olá! Meu nome é Elisio e estou em transição de carreira para me tornar um desenvolvedor front-end. Atualmente, trabalho como altomomo na área de design, utilizando Corel Draw para criar estampas de roupas e projetos para cortes em máquinas CNC.
@@ -74,9 +75,9 @@
       </div>
     </section>
     <section id="habilidades" class="abilitySection">
-      <h1 class="title">HABILIDADES.</h1>
+      <h1 data-scroll="toRight" class="title">HABILIDADES.</h1>
 
-      <div class="abilitySectionBx">
+      <div data-scroll="zoom" class="abilitySectionBx">
 
         <div class="abilityContent_Icons">
           <a><img class="habilidade_img active logos" src="./src/img/javascript.svg" alt="JAVASCRIPT">
@@ -119,8 +120,8 @@
               <h2 class="tech">REACT</h2>
               <div class="slideY">
                 <ul>
-                  <li>Início: <br> <span>26/07/22</span></li>
-                  <li>Conclusão: <br> <span>26/07/22</span></li>
+                  <li>Início: <br> <span class="inicio">26/07/22</span></li>
+                  <li>Conclusão: <br> <span class="conclusao">26/07/22</span></li>
                 </ul>
                 <h1 class="horas">32</h1>
                 <a href="https://www.origamid.com/certificate/dd6750f5" target="_blank">acessar</a>
@@ -136,12 +137,12 @@
 
     </section>
     <section id="projetos" class="projetos">
-      <h1 class="title">PROJETOS.</h1>
+      <h1 data-scroll="toRight" class="title">PROJETOS.</h1>
 
       <button class="prev"></button>
       <button class="next"></button>
 
-      <div class="controls">
+      <div data-scroll="zoom" class="controls">
         <ul class="custom-controls">
           <li></li>
           <li></li>
@@ -151,12 +152,12 @@
       </div>
 
 
-      <div class="wrapper">
+      <div data-scroll="toLeft" class="wrapper">
         <ul class="slide">
 
           <li class="card">
             <div class="cardImg">
-              <img src="./src/img/PROJETO ANIMAIS.gif" alt="">
+              <img src="./src/img/gifs/PROJETO ANIMAIS.gif">
             </div>
             <div class="cardContent">
               <h2>Animais Fantásticos</h2>
@@ -168,14 +169,14 @@
 
               </p>
               <ul class="btnConteiner">
-                <li class="projectLinkBx"><a class="projectLink">Repository</a></li>
-                <li class="projectLinkBx"><a class="projectLink">Deploy</a></li>
+                <li class="projectLinkBx"><a href="https://github.com/Elysium-Santana/Animais-Fantasticos" target="_blank" class="projectLink">Repository</a></li>
+                <li class="projectLinkBx"><a target="_blank" href="https://elysium-santana.github.io/Animais-Fantasticos/" class="projectLink">Deploy</a></li>
               </ul>
             </div>
           </li>
           <li class="card">
             <div class="cardImg">
-              <img src="./src/img/PROJETO BICKRAFT.gif" alt="">
+              <img src="./src/img/gifs/PROJETO BICKRAFT.gif" alt="">
             </div>
             <div class="cardContent">
               <h2>Bickraft</h2>
@@ -186,14 +187,14 @@
                 Design responsivo e posicionamento usando grid e flex box.
               </p>
               <ul class="btnConteiner">
-                <li class="projectLinkBx"><a class="projectLink">Repository</a></li>
-                <li class="projectLinkBx"><a class="projectLink">Deploy</a></li>
+                <li class="projectLinkBx"><a target="_blank" href="https://github.com/Elysium-Santana/bikcraft" class="projectLink">Repository</a></li>
+                <li class="projectLinkBx"><a target="_blank" href="https://elysium-santana.github.io/bikcraft/" class="projectLink">Deploy</a></li>
               </ul>
             </div>
           </li>
           <li class="card">
             <div class="cardImg">
-              <img src="./src/img/PROJETO DOGS.gif" alt="">
+              <img src="./src/img/gifs/PROJETO DOGS.gif" alt="">
             </div>
             <div class="cardContent">
               <h2>Dogs</h2>
@@ -203,9 +204,8 @@
                 validação de formulários e rotas protegidas, tornando-a um projeto robusto.
               </p>
               <ul class="btnConteiner">
-                <li class="projectLinkBx"><a class="projectLink">Repository</a></li>
-                <li class="projectLinkBx"><a class="projectLink">Deploy</a></li>
-              </ul>
+                <li class="projectLinkBx"><a target="_blank" href="https://github.com/Elysium-Santana/Dogs-RS" class="projectLink">Repository</a></li>
+                <li class="projectLinkBx"><a target="_blank" href="https://elysium-santana.github.io/bikcraft/" class="projectLink">Deploy</a></li>
             </div>
           </li>
 
@@ -214,13 +214,13 @@
 
     </section>
     <section id="contato" class="contactSection">
-      <h1 class="title">CONTATO.</h1>
+      <h1 data-scroll="toRight" class="title">CONTATO.</h1>
       <ul class="contactSectionContent">
         <li data-text="Linkedin" data-color="blue"><a class="linkedin" href="https://www.linkedin.com/in/elisio-santana-69282997" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 
         <li data-text="Github" data-color="#051B34"> <a class="github" href="https://github.com/Elysium-Santana" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
 
-        <li data-text="Instagram" data-color="#FA7E1E"><a class="instagram" href="https://www.instagram.com/elisiocorreasantana/
+        <li data-text="Instagram" data-color="#E1669E"><a class="instagram" href="https://www.instagram.com/elisiocorreasantana/
 " target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 
         <li data-text="Outlook" data-color="#2C2D4F"><a class="outlook" href="mailto:camaleplata@outlook.com?subject=Contato pelo portfolio&body=Olá,vi seu portfolio e gostaria de conversar mais sobre seus trabalhos. podemos marcar uma reunião para conversar sobre projetos futuros?" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>

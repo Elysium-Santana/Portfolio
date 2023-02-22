@@ -30,17 +30,17 @@ export default function selectAbility() {
       tecnologia: 'GITHUB',
       titulo: 'Git and GitHub for Web Developers',
       escola: 'Dev Quest',
-      carga_horaria: '00 ',
-      inicio: 'em andamento...',
-      conclusao: 'Breve',
+      carga_horaria: '-- ',
+      inicio: 'cursando...',
+      conclusao: 'breve',
     },
     {
       tecnologia: 'GIT',
       titulo: 'Advanced Git Techniques',
       escola: 'Dev Quest',
-      carga_horaria: '00',
-      inicio: 'em andamento...',
-      conclusao: 'Breve',
+      carga_horaria: '--',
+      inicio: 'cursando...',
+      conclusao: 'breve',
       link: '',
     },
     {
@@ -123,7 +123,6 @@ export default function selectAbility() {
         certifiedLogoImgBx.innerHTML = svgString;
         const certifiedLogoImg = certifiedLogoImgBx.querySelector('svg');
         certifiedLogoImg.classList.add('certifiedLogoImg');
-        console.log(attributeSrc);
         const tech = attributeSrc
           .replace('./src/img/', '')
           .replace('.svg', '')
@@ -134,9 +133,9 @@ export default function selectAbility() {
 
         document.querySelector('.tech').innerHTML =
           certifieds[index].tecnologia;
-        document.querySelector('.slideY ul li:nth-of-type(1) span').innerHTML =
+        document.querySelector('.slideY .inicio').innerHTML =
           certifieds[index].inicio;
-        document.querySelector('.slideY ul li:nth-of-type(2) span').innerHTML =
+        document.querySelector('.slideY .conclusao').innerHTML =
           certifieds[index].conclusao;
         document.querySelector('.horas').innerHTML =
           certifieds[index].carga_horaria;
