@@ -67,6 +67,7 @@ img {
 .conteiner{ 
   max-width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
     
 }
 .section {
@@ -78,6 +79,7 @@ img {
   z-index: -2;
   align-items: center;
   padding-bottom: 5rem;
+  
 }
 /* _____________________________________________________________ */
 
