@@ -1,4 +1,49 @@
-
+@keyframes moveDecorative_2 {
+  0% {
+   right: -70px;
+   bottom: 150px ;
+   transform:  scale(0.8)
+  }
+  50% {
+    right:  70px;
+    bottom: -150px ;
+    transform: scale(1.2) 
+  }
+  100% {
+    right: -70px;
+    bottom: 150px ;
+    scale: (0.8);
+    transform: scale(0.8)
+  }
+}
+@keyframes moveDecorative_1 {
+  0% {
+   left: -10px;
+   top: 50px ;
+   transform:  scale(0.8)
+  }
+  25% {
+    left: 100px;
+    top: 200px ;
+    transform: scale(1.2) 
+  }
+  50% {
+    left:-50px;
+    top: 400px ;
+    transform: scale(1) 
+  }
+  75% {
+    left: -30px;
+    top:100px ;
+    transform:  scale(0.8)
+  }
+  100% {
+  left: -10px;
+  top: 50px ;
+  transform:  scale(0.8)
+   
+  }
+}
 .bgAnime{
   position: relative;
   opacity: 1;

@@ -1,8 +1,39 @@
+
 .sobreMim {
+  /* esse é o pai de de todos elementos  */
+  position: relative;
   background-color: var(--preto);
   color: #aba8a2;
   padding: 4rem 2rem;
+  z-index: -1;
+  overflow: hidden;
+}
+.sobreMim::before{
+  z-index: -1;
+  position: absolute;
+  content: '';
+  top: 100px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  border: solid 4px var(--principal_1);
+  animation: moveDecorative_1 40s ease-in-out infinite;
 
+}
+.sobreMim::after{
+  z-index: -1;
+  position: absolute;
+  content: '';
+  top:400px;
+  right: 0px;
+  width: 400px;
+  height: 200px;
+  border-radius: 30px;
+  border: solid 4px var(--principal_1);
+  
+  animation: moveDecorative_2 30s ease-in-out infinite;
+  transition: .4s;
 }
 
 .sobreMimContent {
@@ -10,6 +41,10 @@
   background-color: var(--background_1);
   border-radius: 15px;
   margin: 2rem 0;
+  z-index: 2;
+  background-color: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(3px);
+
 }
 @media(max-width:600px){
   .sobreMimContent {
