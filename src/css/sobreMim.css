@@ -18,7 +18,7 @@
   height: 200px;
   border-radius: 30px;
   border: solid 4px var(--principal_1);
-  animation: moveDecorative_1 40s ease-in-out infinite;
+  animation: moveDecorative_1 50s ease-in-out infinite;
 
 }
 .sobreMim::after{
@@ -28,7 +28,7 @@
   top:400px;
   right: 0px;
   width: 400px;
-  height: 200px;
+  height: 300px;
   border-radius: 30px;
   border: solid 4px var(--principal_1);
   
