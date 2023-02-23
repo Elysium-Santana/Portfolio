@@ -3,7 +3,8 @@ export default function selectAbility() {
   const images = document.querySelectorAll('.habilidade_img');
   const certifiedLogo = document.querySelector('.certifiedLogo');
   const certifiedDocument = document.querySelector('.certifiedDocument');
-  let certifiedLogoImgBx = document.querySelector('.certifiedLogoImgBx');
+  const certifiedLogoImgBx = document.querySelector('.certifiedLogoImgBx');
+  const subTitle = document.querySelector('.subTitle');
 
   fetchAbility('./src/img/javascript.svg');
 
@@ -88,7 +89,8 @@ export default function selectAbility() {
           () => (
             certifiedLogo.classList.add('active'),
             certifiedDocument.classList.add('active'),
-            target.classList.remove('target')
+            target.classList.remove('target'),
+            subTitle.classList.remove('active')
           ),
           600,
         ),
@@ -105,6 +107,7 @@ export default function selectAbility() {
             ),
           320,
         );
+        subTitle.classList.add('active');
         certifiedDocument.classList.remove('active');
         certifiedLogo.classList.remove('active');
       }

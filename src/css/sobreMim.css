@@ -1,6 +1,8 @@
 
+.sobreMim p {
+  font-weight: 300;
+}
 .sobreMim {
-  /* esse é o pai de de todos elementos  */
   position: relative;
   background-color: var(--preto);
   color: #aba8a2;
@@ -14,8 +16,8 @@
   content: '';
   top: 100px;
   left: 0;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 30px;
   border: solid 4px var(--principal_1);
   animation: moveDecorative_1 50s ease-in-out infinite;
@@ -27,8 +29,8 @@
   content: '';
   top:400px;
   right: 0px;
-  width: 400px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
   border-radius: 30px;
   border: solid 4px var(--principal_1);
   
@@ -43,7 +45,7 @@
   margin: 2rem 0;
   z-index: 2;
   background-color: rgba(30, 30, 30, 0.6);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(1.8px);
 
 }
 @media(max-width:600px){
@@ -52,7 +54,8 @@
   }
   .sobreMim p{
     font-size: .9rem;
-    line-height: 1.1;
+    /* line-height: 1.1; */
+    font-weight: 200;
   }
 }
 @media(max-width:400px){
@@ -62,7 +65,7 @@
   }
   .sobreMim p{
     font-size: .8rem;
-    line-height:1.1 ;
+    line-height:1.2 ;
   }
 }
 @media(max-width:300px){

@@ -4,6 +4,20 @@
 .abilitySection>h1{
   color: #444;
 }
+.subTitle{
+  font-size: .9rem;
+  color: var(--principal_1);
+  opacity: 0;
+  transition: .4s;
+  transform: translateX(-60px);
+}
+.subTitle.active{
+  opacity: 1;
+  transform: translateX(0px);
+
+  
+}
+
 .abilitySection{
   background-color: #f7f7f8;
   padding: 2rem;
@@ -429,9 +443,9 @@ display: inline-block;
 }
 
 @media(max-width:650px){
-  .abilitySection>h1{
+  .abilitySection>h1, .subTitle{
     margin-left: 1rem;
-  } 
+  }   
   .tech::after{
     display: none;
   }
@@ -537,6 +551,10 @@ display: inline-block;
  .abilityContent_Icons{ 
   gap: 1rem;
  }
+ .abilitySection .subTitle.active{
+  font-size: .52rem;
+ }
 }
+ 
 
 
