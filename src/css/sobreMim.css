@@ -1,6 +1,7 @@
 
 .sobreMim p {
   font-weight: 300;
+  font-size: 1.2rem;
 }
 .sobreMim {
   position: relative;
@@ -50,22 +51,23 @@
 }
 @media(max-width:600px){
   .sobreMimContent {
-    padding: 2rem ;
+    padding: 2rem 1rem ;
   }
+  
   .sobreMim p{
-    font-size: .9rem;
-    /* line-height: 1.1; */
-    font-weight: 200;
+    font-size: 1.1rem;
+    line-height: 1.15;
+    /* font-weight: 200; */
   }
 }
 @media(max-width:400px){
   .sobreMimContent {
-    padding: 1rem ;
+    padding: .6rem ;
     margin-top: 1rem;
   }
   .sobreMim p{
-    font-size: .8rem;
-    line-height:1.2 ;
+    font-size: .9rem;
+    line-height: 1.1;
   }
 }
 @media(max-width:300px){
