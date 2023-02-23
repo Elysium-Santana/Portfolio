@@ -550,10 +550,7 @@ display: inline-block;
  }
  .abilityContent_Icons{ 
   gap: 1rem;
- }
- .abilitySection .subTitle.active{
-  font-size: .52rem;
- }
+ } 
 }
  
 
