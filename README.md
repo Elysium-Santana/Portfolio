@@ -1,4 +1,4 @@
-<div  style="text-align:center">
+Oi<div  style="text-align:center">
 
 # Portfolio
 
@@ -45,7 +45,7 @@
 
 ## Projetos
 
-### A seção de projetos apresenta uma lista de projetos que foram desenvolvidos durante o seu aprendizado até o momento, organizados em forma de cards de slides. Cada card contém informações sobre o projeto, como seu nome, descrição e link para acesso.
+### A seção de projetos apresenta uma lista de projetos que foram desenvolvidos durante o meu aprendizado até o momento, organizados em forma de cards de slides. Cada card contém informações sobre o projeto, como seu nome, descrição e link para acesso.
 
 ---
 
