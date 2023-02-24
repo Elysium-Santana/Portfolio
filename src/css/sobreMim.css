@@ -43,7 +43,7 @@
   padding: 2rem 3rem;
   background-color: var(--background_1);
   border-radius: 15px;
-  margin: 2rem 0;
+  margin-top: 2rem ;
   z-index: 2;
   background-color: rgba(30, 30, 30, 0.6);
   backdrop-filter: blur(1.8px);
@@ -51,18 +51,16 @@
 }
 @media(max-width:600px){
   .sobreMimContent {
-    padding: 2rem 1rem ;
-  }
-  
+    padding: 2rem 1.5rem ;
+  }  
   .sobreMim p{
     font-size: 1.1rem;
     line-height: 1.15;
-    /* font-weight: 200; */
   }
 }
 @media(max-width:400px){
   .sobreMimContent {
-    padding: .6rem ;
+    padding: 1rem ;
     margin-top: 1rem;
   }
   .sobreMim p{
