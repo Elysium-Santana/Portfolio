@@ -1,8 +1,8 @@
-Oi<div  style="text-align:center">
+<div  style="text-align:center">
 
 # Portfolio
 
-## Bem-vindo ao meu site portfolio! Desenvolvido com HTML, CSS e JavaScript. Este espaço foi criado para apresentar meus projetos e habilidades. Aqui, você encontrará uma seleção de alguns de meus projetos, que demonstram meu compromisso com a evolução contínua e dedicação.
+Bem-vindo ao meu site portfolio! Desenvolvido com HTML, CSS e JavaScript. Este espaço foi criado para apresentar meus projetos e habilidades. Aqui, você encontrará uma seleção de alguns de meus projetos, que demonstram meu compromisso com a evolução contínua e dedicação.
 
 ---
 
