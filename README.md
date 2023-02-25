@@ -45,7 +45,7 @@ Bem-vindo ao meu site portfolio! Desenvolvido com HTML, CSS e JavaScript. Este e
 
 ## Projetos
 
-### A seção de projetos apresenta uma lista de projetos que foram desenvolvidos durante o meu aprendizado até o momento, organizados em forma de cards de slides. Cada card contém informações sobre o projeto, como seu nome, descrição e link para acesso.
+### A seção de projetos apresenta uma lista de projetos que foram desenvolvidos durante o meu aprendizado até o momento, organizados em forma de slides. Cada card contém informações sobre o projeto, como seu nome, descrição e link para acesso.
 
 ---
 
