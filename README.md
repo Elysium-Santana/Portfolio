@@ -23,7 +23,7 @@ Bem-vindo ao meu site portfolio! Desenvolvido com HTML, CSS e JavaScript. Este e
 
 ## Sobre Mim
 
-### A seção "Sobre Mim" deste site apresenta um design criativo, com destaque para dois pseudoelementos no fundo do texto, animados com keyframes. O efeito de transparência com blur no background do texto é um detalhe diferenciado que valoriza a apresentação.
+### A seção "Sobre Mim" deste site apresenta um design criativo, com destaque para dois pseudoelementos no fundo do texto, animados com keyframes. O efeito de transparência e blur no background do texto é um detalhe diferenciado que valoriza a apresentação.
 
 ---
 
