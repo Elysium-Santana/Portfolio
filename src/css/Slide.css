@@ -47,6 +47,7 @@
   margin: 2px;
   transition: 0.4s;
   background-color: #A97E2F;
+  cursor: pointer;
 }
 .custom-controls li.active {
   opacity: 1;
