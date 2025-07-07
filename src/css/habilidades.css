@@ -24,7 +24,7 @@
   padding-top: 4rem;
   display: flex;
   flex-direction: column;
-  justify-self: center;  
+  /* justify-self: center;   */
   overflow: hidden;
 }
 .abilitySectionBx{
